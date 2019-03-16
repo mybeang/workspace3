@@ -1,0 +1,36 @@
+bridge
+vlan create 10
+vlan add 10 1 u
+vlan add 10 2 u
+exit
+show vlan
+bridge
+vlan del 10 1
+vlan del 10 2
+no vlan 10
+exit
+end
+bridge
+vlan del 10 1
+vlan del 10 2
+no vlan 10
+exit
+end
+bridge
+vlan del 10 1
+vlan del 10 2
+no vlan 10
+exit
+end
+bridge
+vlan del 10 1
+vlan del 10 2
+no vlan 10
+exit
+end
+bridge
+vlan del 10 1
+vlan del 10 2
+no vlan 10
+exit
+end

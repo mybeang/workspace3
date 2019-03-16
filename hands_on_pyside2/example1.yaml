@@ -1,0 +1,24 @@
+# This is dummy Conf File.
+# Do not use to real test.
+
+
+SetupData:
+  BasicSetup:
+    DeviceName: V6848XG
+    EthDevice:
+      - USB Realtech Ethernet 001
+      - USB Realtech Ethernet 002
+    ImagePath: C:\Somewhere\image.x
+    ConfigPath: C:\Somewhere\config.txt
+    TftpIP: 10.55.58.222
+    TftpPath: C:\Somewhere
+  SessionSetup:
+    Comport: COM3
+    Baudrate: 9600
+    ID: admin
+    Passwd:
+
+TestData:
+  TrafficTest:
+    PortRange: 1, 4
+    PktCount: 10000

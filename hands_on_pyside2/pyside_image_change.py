@@ -1,0 +1,130 @@
+from PySide2 import QtCore, QtGui, QtWidgets
+import sys
+from pathlib2 import Path
+
+
+class MyUI(object):
+    def setup_ui(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(1000, 100)
+        #line = QtWidgets.QLabel("-"*200, Form)
+        #line.setGeometry(100, 0, 750, 50)
+        init = QtWidgets.QLabel("초기화", Form)
+        init.setGeometry(90, 30, 100, 50)
+        sysinfo = QtWidgets.QLabel("시스템정보", Form)
+        sysinfo.setGeometry(190, 30, 100, 50)
+        meminfo = QtWidgets.QLabel("메모리정보", Form)
+        meminfo.setGeometry(290, 30, 100, 50)
+        memtest = QtWidgets.QLabel("메모리검사", Form)
+        memtest.setGeometry(390, 30, 100, 50)
+        reboot = QtWidgets.QLabel("재시작", Form)
+        reboot.setGeometry(490, 30, 100, 50)
+        traffic = QtWidgets.QLabel("트래픽검사", Form)
+        traffic.setGeometry(590, 30, 100, 50)
+        upgradeos = QtWidgets.QLabel("OS업그레이드", Form)
+        upgradeos.setGeometry(690, 30, 100, 50)
+        updateconf = QtWidgets.QLabel("표준설정적용", Form)
+        updateconf.setGeometry(790, 30, 100, 50)
+
+        self.image_path = Path(__file__).parent.parent.joinpath('data').joinpath('uidata')
+        init_img = QtGui.QPixmap(str(self.image_path.joinpath("black_buttom.png")))
+        init_img = init_img.scaled(20, 20, QtCore.Qt.KeepAspectRatio)
+        self.init_label = QtWidgets.QLabel(Form)
+        self.init_label.setPixmap(init_img)
+        self.init_label.setGeometry(100, 18, 20, 20)
+        self.sysinfo_lable = QtWidgets.QLabel(Form)
+        self.sysinfo_lable.setPixmap(init_img)
+        self.sysinfo_lable.setGeometry(210, 18, 20, 20)
+        self.meminfo_lable = QtWidgets.QLabel(Form)
+        self.meminfo_lable.setPixmap(init_img)
+        self.meminfo_lable.setGeometry(312, 18, 20, 20)
+        self.memtest_lable = QtWidgets.QLabel(Form)
+        self.memtest_lable.setPixmap(init_img)
+        self.memtest_lable.setGeometry(410, 18, 20, 20)
+        self.reboot_lable = QtWidgets.QLabel(Form)
+        self.reboot_lable.setPixmap(init_img)
+        self.reboot_lable.setGeometry(500, 18, 20, 20)
+        self.traffic_lable = QtWidgets.QLabel(Form)
+        self.traffic_lable.setPixmap(init_img)
+        self.traffic_lable.setGeometry(610, 18, 20, 20)
+        self.upgradeos_lable = QtWidgets.QLabel(Form)
+        self.upgradeos_lable.setPixmap(init_img)
+        self.upgradeos_lable.setGeometry(712, 18, 20, 20)
+        self.updateconf_lable = QtWidgets.QLabel(Form)
+        self.updateconf_lable.setPixmap(init_img)
+        self.updateconf_lable.setGeometry(820, 18, 20, 20)
+
+        self.blackbuttom = QtWidgets.QPushButton("black", Form)
+        self.blackbuttom.setGeometry(30, 70, 100, 20)
+        self.redbuttom = QtWidgets.QPushButton("red", Form)
+        self.redbuttom.setGeometry(160, 70, 100, 20)
+        self.bluebuttom = QtWidgets.QPushButton("blue", Form)
+        self.bluebuttom.setGeometry(290, 70, 100, 20)
+        self.greenbuttom = QtWidgets.QPushButton("green", Form)
+        self.greenbuttom.setGeometry(420, 70, 100, 20)
+
+    def black(self):
+        init_img = QtGui.QPixmap(str(self.image_path.joinpath("black_buttom.png")))
+        init_img = init_img.scaled(20, 20, QtCore.Qt.KeepAspectRatio)
+        self.init_label.setPixmap(init_img)
+        self.sysinfo_lable.setPixmap(init_img)
+        self.meminfo_lable.setPixmap(init_img)
+        self.memtest_lable.setPixmap(init_img)
+        self.reboot_lable.setPixmap(init_img)
+        self.traffic_lable.setPixmap(init_img)
+        self.upgradeos_lable.setPixmap(init_img)
+        self.updateconf_lable.setPixmap(init_img)
+
+
+    def red(self):
+        init_img = QtGui.QPixmap(str(self.image_path.joinpath("red_buttom.png")))
+        init_img = init_img.scaled(20, 20, QtCore.Qt.KeepAspectRatio)
+        self.init_label.setPixmap(init_img)
+        self.sysinfo_lable.setPixmap(init_img)
+        self.meminfo_lable.setPixmap(init_img)
+        self.memtest_lable.setPixmap(init_img)
+        self.reboot_lable.setPixmap(init_img)
+        self.traffic_lable.setPixmap(init_img)
+        self.upgradeos_lable.setPixmap(init_img)
+        self.updateconf_lable.setPixmap(init_img)
+
+
+    def blue(self):
+        init_img = QtGui.QPixmap(str(self.image_path.joinpath("blue_buttom.png")))
+        init_img = init_img.scaled(20, 20, QtCore.Qt.KeepAspectRatio)
+        self.init_label.setPixmap(init_img)
+        self.sysinfo_lable.setPixmap(init_img)
+        self.meminfo_lable.setPixmap(init_img)
+        self.memtest_lable.setPixmap(init_img)
+        self.reboot_lable.setPixmap(init_img)
+        self.traffic_lable.setPixmap(init_img)
+        self.upgradeos_lable.setPixmap(init_img)
+        self.updateconf_lable.setPixmap(init_img)
+
+
+    def green(self):
+        init_img = QtGui.QPixmap(str(self.image_path.joinpath("green_buttom.png")))
+        init_img = init_img.scaled(20, 20, QtCore.Qt.KeepAspectRatio)
+        self.init_label.setPixmap(init_img)
+        self.sysinfo_lable.setPixmap(init_img)
+        self.meminfo_lable.setPixmap(init_img)
+        self.memtest_lable.setPixmap(init_img)
+        self.reboot_lable.setPixmap(init_img)
+        self.traffic_lable.setPixmap(init_img)
+        self.upgradeos_lable.setPixmap(init_img)
+        self.updateconf_lable.setPixmap(init_img)
+
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    window = QtWidgets.QWidget()
+    ui = MyUI()
+    ui.setup_ui(window)
+    window.show()
+
+    ui.blackbuttom.clicked.connect(ui.black)
+    ui.redbuttom.clicked.connect(ui.red)
+    ui.bluebuttom.clicked.connect(ui.blue)
+    ui.greenbuttom.clicked.connect(ui.green)
+
+    sys.exit(app.exec_())

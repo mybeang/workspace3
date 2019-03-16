@@ -1,0 +1,2471 @@
+2019-01-15 21:46:42,521 INFO    {YTestLogging:248} **********************************************************************
+2019-01-15 21:46:42,522 INFO    {YTestLogging:251}                              YTest Start                              
+2019-01-15 21:46:42,522 INFO    {YTestLogging:252} **********************************************************************
+2019-01-15 21:46:42,523 INFO    {YTestLogging:253} TestCase Name: test_4_1_3_1 (FiberLan.Bridge.vlan.Vlan)
+2019-01-15 21:46:42,523 INFO    {YTestLogging:254} Description:   8021q_based
+2019-01-15 21:46:42,524 INFO    {YTestLogging:255} **********************************************************************
+2019-01-15 21:46:42,524 INFO    {TestBase:478} ======================================================================
+2019-01-15 21:46:42,524 INFO    {TestBase:479} YTest Configuration Data
+2019-01-15 21:46:42,525 INFO    {TestBase:480} ----------------------------------------------------------------------
+2019-01-15 21:46:42,525 INFO    {TestBase:481} Random Seed = 4756564945425595544
+2019-01-15 21:46:42,525 INFO    {TestBase:482} ======================================================================
+
+
+
+2019-01-15 21:46:44,226 INFO    {TestBase:218} ======================================================================
+2019-01-15 21:46:44,227 INFO    {TestBase:219}                           Start setUpCommon                           
+2019-01-15 21:46:44,227 INFO    {TestBase:220} ----------------------------------------------------------------------
+2019-01-15 21:46:44,228 REPORT  {__init__:314} SSG Mode    : disable
+2019-01-15 21:46:44,228 SETUP   {__init__:293}  
+2019-01-15 21:46:44,228 SETUP   {__init__:294} ###########################################
+2019-01-15 21:46:44,229 SETUP   {__init__:296} [1] Setup Test Data - Dut & Port Selection
+2019-01-15 21:46:48,953 DEBUG   {CmdSession:408} read_buffer(): "
+
+FL108_01 login: "
+2019-01-15 21:46:48,954 DEBUG   {CmdSession:414} Send User Id admin
+2019-01-15 21:46:51,062 DEBUG   {CmdSession:408} read_buffer(): "admin
+Password: "
+2019-01-15 21:46:51,063 DEBUG   {CmdSession:417} Send Password 
+2019-01-15 21:46:54,721 DEBUG   {CmdSession:408} read_buffer(): "
+Login Time: Jan 15, 2019 08:36:07 (Tue) GMT 
+FL108_01> "
+2019-01-15 21:46:55,440 DEBUG   {CmdSession:371} Prompt: FL108_01>
+2019-01-15 21:46:55,647 DEBUG   {CmdSession:222} Cmd: enable
+2019-01-15 21:46:56,671 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:46:56,672 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:46:56,879 DEBUG   {CmdSession:222} Cmd: terminal length 0
+2019-01-15 21:46:56,987 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:46:57,195 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:46:58,219 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:46:58,220 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:46:58,427 DEBUG   {CmdSession:222} Cmd: exec-timeout 0
+2019-01-15 21:46:58,535 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:46:58,743 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:46:59,767 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:46:59,768 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:46:59,975 DEBUG   {CmdSession:222} Cmd: @show version
+2019-01-15 21:47:00,083 DEBUG   {CmdSession:242} Rsp: root@root-FL108-daily-164 #2 Mon Nov 26 18:19:31 UTC 2018
+URL         :  
+Branch(tag) :  
+commit id   :  
+
+
+2019-01-15 21:47:00,295 DEBUG   {CmdSession:222} Cmd: show version
+2019-01-15 21:47:00,407 DEBUG   {CmdSession:242} Rsp: 
+NOS version daily #201811270231
+
+
+2019-01-15 21:47:01,203 DEBUG   {CmdSession:222} Cmd: show system
+2019-01-15 21:47:01,315 DEBUG   {CmdSession:242} Rsp: 
+          SysInfo(System Information)
+     Model Name          : V5808U
+     Main Memory Size    : 1024 MB
+     Flash Memory Size   : 8 MB(SPANSION 29GL064), 64 MB(MACRONIX 29GL512), 64 MB(SPANSION 29GL512)
+     H/W Revision        : 
+     H/W Address         : 00:d0:cb:ff:00:01
+     Serial Number       : N/A
+     NOS Version         : daily
+     B/L Version         : 01.60.0011
+     PLD Version         : 0x41
+     Manufacturer        : DASAN ZHONE SOLUTIONS
+
+
+2019-01-15 21:47:01,317 REPORT  {__init__:312} 
+
+------------------------------------------------------------
+DCA Summary
+* DUT Class         : <class 'YTest.Dut.FiberLAN.FiberLAN'>
+* ZebOS Generation  : 3
+* MAC Address       : 00:d0:cb:ff:00:01
+
+
+2019-01-15 21:47:01,317 SETUP   {__init__:293}  
+2019-01-15 21:47:01,318 SETUP   {__init__:294} ################################################
+2019-01-15 21:47:01,318 SETUP   {__init__:296} [2] Collect DUT(s) before configuration context
+2019-01-15 21:47:01,527 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:02,551 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:02,552 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:02,759 DEBUG   {CmdSession:222} Cmd: syslog output debug local non-volatile
+2019-01-15 21:47:02,883 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:03,091 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:04,115 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:04,116 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:04,323 DEBUG   {CmdSession:222} Cmd: clear syslog local non-volatile
+2019-01-15 21:47:04,439 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:04,647 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:05,671 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:05,672 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:05,879 DEBUG   {CmdSession:222} Cmd: log syslog
+2019-01-15 21:47:05,999 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:06,207 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:07,231 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:07,232 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:07,439 DEBUG   {CmdSession:222} Cmd: show coredump
+2019-01-15 21:47:07,551 DEBUG   {CmdSession:242} Rsp: ----------------------------------------------------------
+ filename                                         size             
+----------------------------------------------------------
+% coredump not found
+
+2019-01-15 21:47:07,551 DEBUG   {Search:957} title : ['FILE_NAME', 'SIZE']
+2019-01-15 21:47:07,552 DEBUG   {Search:958} table : [['%', 'coredump', 'not', 'found']]
+2019-01-15 21:47:07,552 DEBUG   {Search:970} _match_title_table row : ['%', 'coredump', 'not', 'found']
+2019-01-15 21:47:07,553 DEBUG   {Search:974} len(title) != len(row) : 2 != 4
+2019-01-15 21:47:07,553 DEBUG   {Search:1086} classify_table value is None
+2019-01-15 21:47:07,763 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:08,791 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:08,792 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:08,999 DEBUG   {CmdSession:222} Cmd: clear coredump all
+2019-01-15 21:47:09,115 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:09,323 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:10,347 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:10,348 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:10,555 DEBUG   {CmdSession:222} Cmd: show syslog local non-volatile
+2019-01-15 21:47:10,667 DEBUG   {CmdSession:242} Rsp: 2019-01-15T08:36:19  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:19  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO DISCOVERED serial-number ZNTS036396c4 EqD=244653 (onu 0/1,2)
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO DISCOVERED serial-number ZNTS036396c4 EqD=244653 (onu 0/1,2)
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getOpticalOnuInfo():309] Object does not exist at /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO ONU(0/1,2) ACTIVATION (SN:ZNTS036396c4)
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO ONU(0/1,2) ACTIVATION (SN:ZNTS036396c4)
+2019-01-15T08:36:20  GPON[1043]: call _handle_addOnu(1001, 2, ZNTS036396c4) API
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onuActivated():857] activation: ZNTS036396c4:1001,2 
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getPonOnu():510] Object does not exist at /fiberlan/pon/ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  GPON[1043]: call _handle_updateOnuStatus(1001, 2, 3, 0) API
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 0 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:20  NSM[966]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():360] New ONU 
+2019-01-15T08:36:20  NSM[966]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ZNTS036396c4 
+2019-01-15T08:36:20  last message repeated 2 times
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/pon/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLan::getIfPrefixIndex():799] Object does not exist at /fiberlan/index/ifPrefix/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  last message repeated 4 times
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/status/dev_alias/16 
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::parsePathType():195] Path ignored: /fiberlan/status/dev_alias/16 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16, is_updated: 0 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16 
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::handleExtenderUpdated():471] No such onu activate yet: ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::handleOnuMapped():150] Newly ONU mapped 
+2019-01-15T08:36:20  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onuFixedCallback():1710] Onu Fixed cb 1001/2 ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:36:20  vtysh: SetCommand admin(10.55.195.22), cmd(log syslog) 
+2019-01-15T08:36:20  vtysh: SetCommand admin(10.55.195.22), cmd(log syslog) 
+2019-01-15T08:36:22  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:22  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:23  vtysh: SetCommand admin(10.55.195.22), cmd(clear coredump all) 
+2019-01-15T08:36:23  vtysh: SetCommand admin(10.55.195.22), cmd(clear coredump all) 
+2019-01-15T08:36:24  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:24  GPON[1043]: call _handle_updateOnuConfigMode(1001, 2, 4 2) API
+2019-01-15T08:36:24  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:36:24  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:24  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():369] Update onu(ZNTS036396c4/ZNTS036396c4) config mode from 0->2 
+2019-01-15T08:36:24  GPON[1043]: call _handle_updateMgmtIp(1001, 2, 131, 259, 0x01000102) API
+2019-01-15T08:36:24  GPON[1043]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/0 
+2019-01-15T08:36:24  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/0, is_updated: 0 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleUniUpdate():275] New UNI 
+2019-01-15T08:36:24  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/0 
+2019-01-15T08:36:24  NSM[966]: [FiberLan::getInterfaceConfig():646] Object does not exist at /fiberlan/cli_config/16/0 
+2019-01-15T08:36:25  NSM[966]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/99 
+2019-01-15T08:36:25  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:25  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16 
+2019-01-15T08:36:25  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16, is_updated: 1 
+2019-01-15T08:36:25  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/0, is_updated: 0 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/0 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/0 
+2019-01-15T08:36:25  GPON[1043]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::updateVlan():1450] vlan mode not set yet: 1001/2-0, devID: 16 
+2019-01-15T08:36:25  GPON[1043]: [FiberLan::getInterfaceQos():755] Object does not exist at /fiberlan/cli_config/16/0/qos 
+2019-01-15T08:36:25  GPON[1043]: [FiberLan::getInterfaceAuth():843] Object does not exist at /fiberlan/cli_config/16/0/auth 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():219] uniAdminCallback 
+
+2019-01-15 21:47:10,875 DEBUG   {CmdSession:222} Cmd: show run
+2019-01-15 21:47:11,059 DEBUG   {CmdSession:242} Rsp: !
+no service password-encryption
+!
+hostname FL108_01
+!
+syslog output info local volatile
+syslog output info local non-volatile
+syslog output debug local non-volatile
+log syslog
+!
+login connect 8
+!
+snmp community ro fmnLazabTR
+!
+fan operation on
+!
+ip domain-lookup
+ip icmp-broadcast
+bridge 1 protocol ieee vlan-bridge
+no mls qos
+bridge shutdown 1 bridge-forward
+!
+port-extender database
+ port-extender ZNTS03635c06 name ZNTS03635c06 state autoprovisioned
+ port-extender ZNTS036396c4 name ZNTS036396c4 state autoprovisioned
+!
+vlan database
+ vlan 7 bridge 1 state enable
+ vlan 7 bridge 1 port-extender management
+!
+!
+interface mgmt
+ ip address 10.55.195.92/24
+ no shutdown
+!
+interface lo
+ no shutdown
+!
+interface optical-line 0/1
+ switchport
+ no shutdown
+!
+interface optical-line 0/2
+ switchport
+ no shutdown
+!
+interface optical-line 0/3
+ switchport
+ no shutdown
+!
+interface optical-line 0/4
+ switchport
+ no shutdown
+!
+interface optical-line 0/5
+ switchport
+ no shutdown
+!
+interface optical-line 0/6
+ switchport
+ no shutdown
+!
+interface optical-line 0/7
+ switchport
+ no shutdown
+!
+interface optical-line 0/8
+ switchport
+ no shutdown
+!
+interface tengigabitethernet 0/9
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode trunk
+ no shutdown
+!
+interface tengigabitethernet 0/10
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode access
+ no shutdown
+!
+interface tengigabitethernet 0/11
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode trunk
+ no shutdown
+!
+interface tengigabitethernet 0/12
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode trunk
+ no shutdown
+!
+interface vlan 1.7
+ ip address 1.0.0.1/8
+ no shutdown
+!
+interface ZNTS03635c06
+ autoprovisioned
+ switchport
+ bridge-group 1
+ no shutdown
+!
+interface ZNTS03635c06/1
+ autoprovisioned
+ switchport
+ bridge-group 1
+ switchport mode access
+ no shutdown
+!
+interface ZNTS03635c06/2
+ autoprovisioned
+ switchport
+ bridge-group 1
+ switchport mode access
+ no shutdown
+!
+interface ZNTS03635c06/3
+ autoprovisioned
+ switchport
+ bridge-group 1
+ switchport mode access
+ no shutdown
+!
+interface ZNTS03635c06/4
+ autoprovisioned
+ switchport
+ bridge-group 1
+ switchport mode access
+ no shutdown
+!
+ip route 0.0.0.0/0 10.55.195.254
+!
+line con 0
+ login
+line vty 0 7
+ login
+!
+apc
+!
+!
+!
+end
+
+
+2019-01-15 21:47:11,267 DEBUG   {CmdSession:222} Cmd: show coredump
+2019-01-15 21:47:11,379 DEBUG   {CmdSession:242} Rsp: ----------------------------------------------------------
+ filename                                         size             
+----------------------------------------------------------
+% coredump not found
+
+2019-01-15 21:47:11,379 DEBUG   {Search:957} title : ['FILE_NAME', 'SIZE']
+2019-01-15 21:47:11,380 DEBUG   {Search:958} table : [['%', 'coredump', 'not', 'found']]
+2019-01-15 21:47:11,380 DEBUG   {Search:970} _match_title_table row : ['%', 'coredump', 'not', 'found']
+2019-01-15 21:47:11,381 DEBUG   {Search:974} len(title) != len(row) : 2 != 4
+2019-01-15 21:47:11,381 DEBUG   {Search:1086} classify_table value is None
+2019-01-15 21:47:11,381 INFO    {TestBase:223} ----------------------------------------------------------------------
+2019-01-15 21:47:11,382 INFO    {TestBase:224}                           Finish setUpCommon                          
+2019-01-15 21:47:11,382 INFO    {TestBase:225} ======================================================================
+
+
+
+2019-01-15 21:47:11,382 INFO    {TestBase:218} ======================================================================
+2019-01-15 21:47:11,383 INFO    {TestBase:219}                          Start setUp_4_1_3_1                          
+2019-01-15 21:47:11,383 INFO    {TestBase:220} ----------------------------------------------------------------------
+2019-01-15 21:47:11,383 SETUP   {__init__:293}  
+2019-01-15 21:47:11,384 SETUP   {__init__:294} ###########################################
+2019-01-15 21:47:11,384 SETUP   {__init__:296} [3] Setup Test Data - Test Data Generation
+2019-01-15 21:47:11,385 SETUP   {__init__:301}  
+2019-01-15 21:47:11,385 SETUP   {__init__:302} --------------------------------------------------
+2019-01-15 21:47:11,386 SETUP   {__init__:304} [3-1] FiberLAN Configuration for Legacy Test Case
+2019-01-15 21:47:11,595 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:12,619 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:12,619 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:12,826 DEBUG   {CmdSession:222} Cmd: interface optical-line 0/1
+2019-01-15 21:47:13,859 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-optical0/1)#
+2019-01-15 21:47:13,860 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:13,860 DEBUG   {CmdSession:222} Cmd: no shutdown
+2019-01-15 21:47:13,971 DEBUG   {CmdSession:242} Rsp: % Interface Already Up
+
+2019-01-15 21:47:13,972 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:47:14,995 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:14,996 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:15,202 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:16,227 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:16,228 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:16,228 REPORT  {__init__:314} ======== 59 seconds ========
+2019-01-15 21:47:16,434 DEBUG   {CmdSession:222} Cmd: show run | include ZNTS036396c4/1
+2019-01-15 21:47:16,626 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:26,637 REPORT  {__init__:314} ======== 49 seconds ========
+2019-01-15 21:47:26,846 DEBUG   {CmdSession:222} Cmd: show run | include ZNTS036396c4/1
+2019-01-15 21:47:27,071 DEBUG   {CmdSession:242} Rsp: interface ZNTS036396c4/1
+
+2019-01-15 21:47:27,072 REPORT  {__init__:314} ======== 59 seconds ========
+2019-01-15 21:47:27,278 DEBUG   {CmdSession:222} Cmd: show run | include ZNTS03635c06/2
+2019-01-15 21:47:27,506 DEBUG   {CmdSession:242} Rsp: interface ZNTS03635c06/2
+
+2019-01-15 21:47:27,608 REPORT  {__init__:312} 
+
+Test Data Summary
+* Dut List
+------------------------------------------------------------
+dut_name : FL108_01
+ - dut_port [0] : tengigabitethernet 0/9,xe0/9,FL108_01-xe0-9
+ - dut_port [1] : ZNTS036396c4/1,ZNTS036396c4/1,Z2804_10-1
+ - dut_port [2] : ZNTS03635c06/2,ZNTS03635c06/2,Z2804_45-2
+slave_name : Z2804_10
+ - slave_port [0] : ZNTS036396c4/1,ZNTS036396c4/1,Z2804_10-1
+slave_name : Z2804_45
+ - slave_port [0] : ZNTS03635c06/2,ZNTS03635c06/2,Z2804_45-2
+------------------------------------------------------------
+* VLAN List
+['10', '11']
+* MAC List
+['00:00:00:00:00:0a', '00:00:00:00:00:0b', '00:00:00:00:00:0c', '00:00:00:00:00:0d']
+* IP List
+[[], []]
+* Packet Count : 10
+
+
+2019-01-15 21:47:27,608 SETUP   {__init__:293}  
+2019-01-15 21:47:27,608 SETUP   {__init__:294} #######################
+2019-01-15 21:47:27,608 SETUP   {__init__:296} [4] Setup packet data.
+2019-01-15 21:47:27,614 REPORT  {__init__:312} 
+
+Packet Data Summary
+* RTG port   : Attached
+* Sniffering : Enabled
+* VHub       : Disabled
+
+2019-01-15 21:47:27,614 SETUP   {__init__:293}  
+2019-01-15 21:47:27,615 SETUP   {__init__:294} ##################
+2019-01-15 21:47:27,615 SETUP   {__init__:296} [5] Configure DUT
+2019-01-15 21:47:27,822 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:28,846 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:28,847 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:29,054 DEBUG   {CmdSession:222} Cmd: bridge 1 protocol ieee vlan-bridge
+2019-01-15 21:47:29,166 DEBUG   {CmdSession:242} Rsp: % Bridge 1 already exists
+
+2019-01-15 21:47:29,167 DEBUG   {CmdSession:222} Cmd: ip forwarding
+2019-01-15 21:47:29,274 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:29,482 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:30,506 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:30,507 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:30,714 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:31,738 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:31,739 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:31,946 DEBUG   {CmdSession:222} Cmd: bridge shutdown 1 bridge-forward
+2019-01-15 21:47:32,058 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:32,266 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:33,290 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:33,291 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:33,498 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:34,523 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:34,523 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:34,730 DEBUG   {CmdSession:222} Cmd: interface tengigabitethernet 0/9
+2019-01-15 21:47:35,758 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-xe0/9)#
+2019-01-15 21:47:35,759 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:35,759 DEBUG   {CmdSession:222} Cmd: no shutdown
+2019-01-15 21:47:35,866 DEBUG   {CmdSession:242} Rsp: % Interface Already Up
+
+2019-01-15 21:47:35,866 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:47:36,890 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:36,891 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:37,098 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:38,122 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:38,123 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:38,330 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:39,354 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:39,355 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:39,562 DEBUG   {CmdSession:222} Cmd: interface ZNTS036396c4/1
+2019-01-15 21:47:40,591 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS036396c4/1)#
+2019-01-15 21:47:40,592 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:40,592 DEBUG   {CmdSession:222} Cmd: no shutdown
+2019-01-15 21:47:40,698 DEBUG   {CmdSession:242} Rsp: % Interface Already Up
+
+2019-01-15 21:47:40,699 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:47:41,726 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:41,727 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:41,934 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:42,958 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:42,959 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:43,166 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:44,190 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:44,192 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:44,398 DEBUG   {CmdSession:222} Cmd: interface ZNTS03635c06/2
+2019-01-15 21:47:45,422 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS03635c06/2)#
+2019-01-15 21:47:45,423 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:45,423 DEBUG   {CmdSession:222} Cmd: no shutdown
+2019-01-15 21:47:45,570 DEBUG   {CmdSession:242} Rsp: % Interface Already Up
+
+2019-01-15 21:47:45,570 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:47:46,594 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:46,595 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:46,802 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:47,826 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:47,827 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:47,828 SETUP   {__init__:301}  
+2019-01-15 21:47:47,828 SETUP   {__init__:302} -----------------------
+2019-01-15 21:47:47,829 SETUP   {__init__:304} [5-1] Configure VLANs.
+2019-01-15 21:47:48,038 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:49,062 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:49,063 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:49,269 DEBUG   {CmdSession:222} Cmd: vlan database
+2019-01-15 21:47:50,294 DEBUG   {CmdSession:371} Prompt: FL108_01(config-vlan)#
+2019-01-15 21:47:50,295 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:50,296 DEBUG   {CmdSession:222} Cmd: vlan 10 bridge 1
+2019-01-15 21:47:50,411 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:50,411 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:47:51,434 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:51,435 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:51,641 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:52,666 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:52,666 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:52,873 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:53,898 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:53,899 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:54,105 DEBUG   {CmdSession:222} Cmd: vlan database
+2019-01-15 21:47:55,134 DEBUG   {CmdSession:371} Prompt: FL108_01(config-vlan)#
+2019-01-15 21:47:55,135 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:55,135 DEBUG   {CmdSession:222} Cmd: vlan 11 bridge 1
+2019-01-15 21:47:55,245 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:47:55,246 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:47:56,270 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:56,270 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:56,477 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:57,502 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:57,502 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:47:57,503 SETUP   {__init__:301}  
+2019-01-15 21:47:57,503 SETUP   {__init__:302} -------------------------------------------
+2019-01-15 21:47:57,503 SETUP   {__init__:304} [5-2] Configure VLAN member of each VLANs.
+2019-01-15 21:47:57,713 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:47:58,738 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:47:58,738 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:47:58,945 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:47:59,970 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:47:59,970 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:00,177 DEBUG   {CmdSession:222} Cmd: show interface tengigabitethernet 0/9
+2019-01-15 21:48:00,289 DEBUG   {CmdSession:242} Rsp: Interface xe0/9 is up, line protocol is up
+  Hardware is ETH  Current HW addr: 00d0.cbff.0001
+  Physical:00d0.cbff.0001  Logical:(not set)
+  index 5009 metric 1 mtu 1500 duplex-full
+  Port Mode is trunk
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  VRF Binding: Not bound
+  Bandwidth 1g
+  DHCP client is disabled.
+Link up time: 48939 secs
+Interface elapsed time after clear stats: 48975 secs
+input packets 120, bytes 7,680, dropped 0
+multicast packets 20, broadcast packets 40,
+FCS error 0, UndersizeErrors 0, OverSizeErrors 0
+output packets 296, bytes 19,192, dropped 0
+multicast packets 0, broadcast packets 236
+Received Packets 4095 to 9216 Octets: 0
+Transmitted Packets 4095 to 9216 Octets: 0
+
+
+2019-01-15 21:48:00,497 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:48:01,521 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:01,522 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:48:01,729 DEBUG   {CmdSession:222} Cmd: interface tengigabitethernet 0/9
+2019-01-15 21:48:02,758 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-xe0/9)#
+2019-01-15 21:48:02,758 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:02,759 DEBUG   {CmdSession:222} Cmd: switchport
+2019-01-15 21:48:02,865 DEBUG   {CmdSession:242} Rsp: % Interface already a switchport
+
+2019-01-15 21:48:02,866 DEBUG   {CmdSession:222} Cmd: bridge-group 1
+2019-01-15 21:48:02,973 DEBUG   {CmdSession:242} Rsp: % Interface spanning-tree mode already exist
+
+2019-01-15 21:48:03,181 DEBUG   {CmdSession:222} Cmd: interface tengigabitethernet 0/9
+2019-01-15 21:48:04,210 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-xe0/9)#
+2019-01-15 21:48:04,210 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:04,210 DEBUG   {CmdSession:222} Cmd: switchport mode trunk
+2019-01-15 21:48:04,321 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:04,322 DEBUG   {CmdSession:222} Cmd: switchport trunk allowed vlan add 10
+2019-01-15 21:48:04,433 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:04,436 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:48:05,466 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:05,466 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:05,673 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:48:06,697 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:48:06,698 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:06,905 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:48:07,929 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:07,930 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:48:08,137 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:48:09,161 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:48:09,162 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:09,369 DEBUG   {CmdSession:222} Cmd: show interface tengigabitethernet 0/9
+2019-01-15 21:48:09,481 DEBUG   {CmdSession:242} Rsp: Interface xe0/9 is up, line protocol is up
+  Hardware is ETH  Current HW addr: 00d0.cbff.0001
+  Physical:00d0.cbff.0001  Logical:(not set)
+  index 5009 metric 1 mtu 1500 duplex-full
+  Port Mode is trunk
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  VRF Binding: Not bound
+  Bandwidth 1g
+  DHCP client is disabled.
+Link up time: 48948 secs
+Interface elapsed time after clear stats: 48984 secs
+input packets 120, bytes 7,680, dropped 0
+multicast packets 20, broadcast packets 40,
+FCS error 0, UndersizeErrors 0, OverSizeErrors 0
+output packets 296, bytes 19,192, dropped 0
+multicast packets 0, broadcast packets 236
+Received Packets 4095 to 9216 Octets: 0
+Transmitted Packets 4095 to 9216 Octets: 0
+
+
+2019-01-15 21:48:09,693 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:48:10,718 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:10,718 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:48:10,925 DEBUG   {CmdSession:222} Cmd: interface tengigabitethernet 0/9
+2019-01-15 21:48:11,953 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-xe0/9)#
+2019-01-15 21:48:11,954 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:11,954 DEBUG   {CmdSession:222} Cmd: switchport
+2019-01-15 21:48:12,061 DEBUG   {CmdSession:242} Rsp: % Interface already a switchport
+
+2019-01-15 21:48:12,062 DEBUG   {CmdSession:222} Cmd: bridge-group 1
+2019-01-15 21:48:12,173 DEBUG   {CmdSession:242} Rsp: % Interface spanning-tree mode already exist
+
+2019-01-15 21:48:12,381 DEBUG   {CmdSession:222} Cmd: interface tengigabitethernet 0/9
+2019-01-15 21:48:13,410 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-xe0/9)#
+2019-01-15 21:48:13,411 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:13,411 DEBUG   {CmdSession:222} Cmd: switchport mode trunk
+2019-01-15 21:48:13,521 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:13,521 DEBUG   {CmdSession:222} Cmd: switchport trunk allowed vlan add 11
+2019-01-15 21:48:13,633 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:13,633 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:48:14,661 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:14,662 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:14,869 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:48:15,893 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:48:15,894 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:16,101 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:48:17,125 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:17,126 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:48:17,333 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:48:18,357 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:48:18,357 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:18,565 DEBUG   {CmdSession:222} Cmd: show interface ZNTS036396c4/1
+2019-01-15 21:48:18,677 DEBUG   {CmdSession:242} Rsp: Interface ZNTS036396c4/1 is up, line protocol is up
+  Hardware is PE  Current HW addr: 00d0.cbff.0001
+  Physical:00d0.cbff.0001  Logical:(not set)
+  index 6092 metric 1 mtu 1500 duplex-half
+  Port Mode is access
+  Device group member, Leader is ZNTS036396c4
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  VRF Binding: Not bound
+  Bandwidth 1g
+  DHCP client is disabled.
+Link up time: 0 secs
+Interface elapsed time after clear stats: 48993 secs
+input packets 16, bytes 1,024, dropped 0
+multicast packets 0, broadcast packets 16,
+FCS error 0, UndersizeErrors 0, OverSizeErrors 0
+output packets 33, bytes 2,244, dropped 0
+multicast packets 0, broadcast packets 0
+Received Packets 4095 to 9216 Octets: 0
+Transmitted Packets 4095 to 9216 Octets: 0
+
+
+2019-01-15 21:48:18,885 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:48:19,909 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:19,912 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:48:20,121 DEBUG   {CmdSession:222} Cmd: interface ZNTS036396c4/1
+2019-01-15 21:48:21,149 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS036396c4/1)#
+2019-01-15 21:48:21,150 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:21,151 DEBUG   {CmdSession:222} Cmd: switchport
+2019-01-15 21:48:21,261 DEBUG   {CmdSession:242} Rsp: % Interface already a switchport
+
+2019-01-15 21:48:21,261 DEBUG   {CmdSession:222} Cmd: bridge-group 1
+2019-01-15 21:48:21,369 DEBUG   {CmdSession:242} Rsp: % Interface spanning-tree mode already exist
+
+2019-01-15 21:48:21,577 DEBUG   {CmdSession:222} Cmd: interface ZNTS036396c4/1
+2019-01-15 21:48:22,606 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS036396c4/1)#
+2019-01-15 21:48:22,606 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:22,607 DEBUG   {CmdSession:222} Cmd: switchport mode access
+2019-01-15 21:48:22,717 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:22,717 DEBUG   {CmdSession:222} Cmd: switchport access vlan 10
+2019-01-15 21:48:22,853 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:22,853 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:48:23,877 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:23,878 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:24,085 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:48:25,109 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:48:25,109 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:25,317 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:48:26,341 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:26,341 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:48:26,549 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:48:27,573 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:48:27,573 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:27,780 DEBUG   {CmdSession:222} Cmd: show interface ZNTS03635c06/2
+2019-01-15 21:48:27,892 DEBUG   {CmdSession:242} Rsp: Interface ZNTS03635c06/2 is up, line protocol is up
+  Hardware is PE  Current HW addr: 00d0.cbff.0001
+  Physical:00d0.cbff.0001  Logical:(not set)
+  index 6087 metric 1 mtu 1500 duplex-half
+  Port Mode is access
+  Device group member, Leader is ZNTS03635c06
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  VRF Binding: Not bound
+  Bandwidth 1g
+  DHCP client is disabled.
+Link up time: 0 secs
+Interface elapsed time after clear stats: 49002 secs
+input packets 1,426, bytes 91,264, dropped 0
+multicast packets 64, broadcast packets 1,112,
+FCS error 0, UndersizeErrors 0, OverSizeErrors 0
+output packets 22,627, bytes 1,548,896, dropped 0
+multicast packets 222, broadcast packets 1,468
+Received Packets 4095 to 9216 Octets: 0
+Transmitted Packets 4095 to 9216 Octets: 0
+
+
+2019-01-15 21:48:28,100 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:48:29,125 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:29,126 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:48:29,332 DEBUG   {CmdSession:222} Cmd: interface ZNTS03635c06/2
+2019-01-15 21:48:30,361 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS03635c06/2)#
+2019-01-15 21:48:30,361 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:30,362 DEBUG   {CmdSession:222} Cmd: switchport
+2019-01-15 21:48:30,472 DEBUG   {CmdSession:242} Rsp: % Interface already a switchport
+
+2019-01-15 21:48:30,473 DEBUG   {CmdSession:222} Cmd: bridge-group 1
+2019-01-15 21:48:30,584 DEBUG   {CmdSession:242} Rsp: % Interface spanning-tree mode already exist
+
+2019-01-15 21:48:30,792 DEBUG   {CmdSession:222} Cmd: interface ZNTS03635c06/2
+2019-01-15 21:48:31,824 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS03635c06/2)#
+2019-01-15 21:48:31,825 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:31,825 DEBUG   {CmdSession:222} Cmd: switchport mode trunk
+2019-01-15 21:48:31,952 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:31,953 DEBUG   {CmdSession:222} Cmd: switchport trunk allowed vlan add 11
+2019-01-15 21:48:32,076 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:48:32,077 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:48:33,101 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:48:33,101 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:33,308 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:48:34,332 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:48:34,333 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:48:34,333 SETUP   {__init__:301}  
+2019-01-15 21:48:34,333 SETUP   {__init__:302} --------------------------------------------
+2019-01-15 21:48:34,333 SETUP   {__init__:304} [5-3] Wait 60 seconds for ONT[1] VLAN OMCI.
+2019-01-15 21:49:34,410 SETUP   {__init__:301}  
+2019-01-15 21:49:34,411 SETUP   {__init__:302} --------------------------------------------
+2019-01-15 21:49:34,411 SETUP   {__init__:304} [5-4] Wait 60 seconds for ONT[2] VLAN OMCI.
+2019-01-15 21:50:34,489 INFO    {TestBase:223} ----------------------------------------------------------------------
+2019-01-15 21:50:34,490 INFO    {TestBase:224}                          Finish setUp_4_1_3_1                         
+2019-01-15 21:50:34,490 INFO    {TestBase:225} ======================================================================
+
+
+
+2019-01-15 21:50:34,491 INFO    {TestBase:660} **********************************************************************
+2019-01-15 21:50:34,491 INFO    {TestBase:661}                               Start Test                              
+2019-01-15 21:50:34,491 INFO    {TestBase:662} **********************************************************************
+2019-01-15 21:50:34,492 TEST    {__init__:293}  
+2019-01-15 21:50:34,492 TEST    {__init__:294} ##########################
+2019-01-15 21:50:34,492 TEST    {__init__:296} [1] Verify Setup Sequence
+2019-01-15 21:50:34,493 INFO    {__init__:65}  
+2019-01-15 21:50:34,493 PASS    {__init__:66} Setup Sequence Okay
+2019-01-15 21:50:34,497 INFO    {__init__:67} ---------- PASS ----------
+2019-01-15 21:50:34,497 TEST    {__init__:293}  
+2019-01-15 21:50:34,497 TEST    {__init__:294} #########################################################
+2019-01-15 21:50:34,498 TEST    {__init__:296} [2] Start packet capture on port[0], port[1] and port[2]
+2019-01-15 21:50:34,506 TEST    {__init__:293}  
+2019-01-15 21:50:34,507 TEST    {__init__:294} ###################################################
+2019-01-15 21:50:34,507 TEST    {__init__:296} [3] Send N packets with f[0], f[1], f[2] and [f3].
+2019-01-15 21:50:56,332 TEST    {__init__:293}  
+2019-01-15 21:50:56,332 TEST    {__init__:294} ############################
+2019-01-15 21:50:56,333 TEST    {__init__:296} [4] Check received packets.
+2019-01-15 21:50:56,333 TEST    {__init__:301}  
+2019-01-15 21:50:56,334 TEST    {__init__:302} ---------------------
+2019-01-15 21:50:56,334 TEST    {__init__:304} [4-1] Check Port [0]
+2019-01-15 21:50:57,374 REPORT  {__init__:312} 
+
+--------------------------------------------------
+              Act_rx_cnt  Exp_rx_cnt
+Flow_name                           
+expect_flow2          10          10
+expect_flow3          10          10
+--------------------------------------------------
+
+Criteria: flow_N(Act_rx_cnt) == flow_N(Exp_rx_cnt) 
+--------------------------------------------------
+
+
+2019-01-15 21:50:57,375 PASS    {__init__:92} 4-1 - PACKETS are matched
+2019-01-15 21:50:57,376 INFO    {__init__:93} ---------- PASS ----------
+2019-01-15 21:50:57,376 TEST    {__init__:301}  
+2019-01-15 21:50:57,376 TEST    {__init__:302} ---------------------
+2019-01-15 21:50:57,377 TEST    {__init__:304} [4-2] Check Port [1]
+2019-01-15 21:50:58,394 REPORT  {__init__:312} 
+
+--------------------------------------------------
+              Act_rx_cnt  Exp_rx_cnt
+Flow_name                           
+expect_flow0          10          10
+--------------------------------------------------
+
+Criteria: flow_N(Act_rx_cnt) == flow_N(Exp_rx_cnt) 
+--------------------------------------------------
+
+
+2019-01-15 21:50:58,395 PASS    {__init__:92} 4-2 - PACKETS are matched
+2019-01-15 21:50:58,395 INFO    {__init__:93} ---------- PASS ----------
+2019-01-15 21:50:58,395 TEST    {__init__:301}  
+2019-01-15 21:50:58,396 TEST    {__init__:302} ---------------------
+2019-01-15 21:50:58,396 TEST    {__init__:304} [4-3] Check Port [2]
+2019-01-15 21:50:59,412 REPORT  {__init__:312} 
+
+--------------------------------------------------
+              Act_rx_cnt  Exp_rx_cnt
+Flow_name                           
+expect_flow1          10          10
+--------------------------------------------------
+
+Criteria: flow_N(Act_rx_cnt) == flow_N(Exp_rx_cnt) 
+--------------------------------------------------
+
+
+2019-01-15 21:50:59,413 PASS    {__init__:92} 4-3 - PACKETS are matched
+2019-01-15 21:50:59,413 INFO    {__init__:93} ---------- PASS ----------
+2019-01-15 21:50:59,414 INFO    {TestBase:605} 
+
+
+
+2019-01-15 21:50:59,414 INFO    {TestBase:218} ======================================================================
+2019-01-15 21:50:59,415 INFO    {TestBase:219}                         Start tearDown_4_1_3_1                        
+2019-01-15 21:50:59,415 INFO    {TestBase:220} ----------------------------------------------------------------------
+2019-01-15 21:50:59,415 TEARDN  {__init__:293}  
+2019-01-15 21:50:59,416 TEARDN  {__init__:294} ####################
+2019-01-15 21:50:59,416 TEARDN  {__init__:296} [1] Deconfigure DUT
+2019-01-15 21:50:59,416 TEARDN  {__init__:301}  
+2019-01-15 21:50:59,417 TEARDN  {__init__:302} ---------------------------------------------
+2019-01-15 21:50:59,417 TEARDN  {__init__:304} [1-1] Deconfigure VLAN member of each VLANs.
+2019-01-15 21:50:59,624 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:00,649 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:00,650 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:00,856 DEBUG   {CmdSession:222} Cmd: interface tengigabitethernet 0/9
+2019-01-15 21:51:01,885 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-xe0/9)#
+2019-01-15 21:51:01,885 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:01,886 DEBUG   {CmdSession:222} Cmd: switchport trunk allowed vlan remove 10
+2019-01-15 21:51:01,996 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:01,996 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:51:03,025 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:03,025 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:03,232 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:04,256 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:04,257 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:04,464 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:05,493 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:05,493 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:05,700 DEBUG   {CmdSession:222} Cmd: interface tengigabitethernet 0/9
+2019-01-15 21:51:06,728 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-xe0/9)#
+2019-01-15 21:51:06,729 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:06,729 DEBUG   {CmdSession:222} Cmd: switchport trunk allowed vlan remove 11
+2019-01-15 21:51:06,840 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:06,840 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:51:07,868 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:07,869 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:08,076 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:09,100 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:09,101 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:09,308 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:10,332 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:10,333 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:10,540 DEBUG   {CmdSession:222} Cmd: interface ZNTS036396c4/1
+2019-01-15 21:51:11,569 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS036396c4/1)#
+2019-01-15 21:51:11,569 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:11,569 DEBUG   {CmdSession:222} Cmd: no switchport access vlan
+2019-01-15 21:51:11,704 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:11,704 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:51:12,732 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:12,733 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:12,940 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:13,964 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:13,965 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:14,172 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:15,196 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:15,197 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:15,403 DEBUG   {CmdSession:222} Cmd: interface ZNTS03635c06/2
+2019-01-15 21:51:16,444 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-ZNTS03635c06/2)#
+2019-01-15 21:51:16,445 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:16,445 DEBUG   {CmdSession:222} Cmd: switchport trunk allowed vlan remove 11
+2019-01-15 21:51:16,564 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:16,564 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:51:17,592 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:17,593 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:17,799 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:18,824 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:18,825 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:18,825 TEARDN  {__init__:301}  
+2019-01-15 21:51:18,826 TEARDN  {__init__:302} -------------------------
+2019-01-15 21:51:18,826 TEARDN  {__init__:304} [1-2] Deconfigure VLANs.
+2019-01-15 21:51:19,036 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:20,060 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:20,060 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:20,267 DEBUG   {CmdSession:222} Cmd: vlan database
+2019-01-15 21:51:21,292 DEBUG   {CmdSession:371} Prompt: FL108_01(config-vlan)#
+2019-01-15 21:51:21,293 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:21,293 DEBUG   {CmdSession:222} Cmd: no vlan 10 bridge 1
+2019-01-15 21:51:21,407 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:21,408 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:51:22,432 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:22,433 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:22,639 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:23,664 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:23,665 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:23,871 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:24,896 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:24,896 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:25,103 DEBUG   {CmdSession:222} Cmd: vlan database
+2019-01-15 21:51:26,132 DEBUG   {CmdSession:371} Prompt: FL108_01(config-vlan)#
+2019-01-15 21:51:26,133 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:26,133 DEBUG   {CmdSession:222} Cmd: no vlan 11 bridge 1
+2019-01-15 21:51:26,247 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:26,248 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:51:27,272 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:27,272 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:27,479 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:28,503 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:28,504 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:28,505 TEARDN  {__init__:293}  
+2019-01-15 21:51:28,505 TEARDN  {__init__:294} ############################################
+2019-01-15 21:51:28,506 TEARDN  {__init__:296} [2] Deconfigure FiberLAN Test Configuration
+2019-01-15 21:51:28,715 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:29,740 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:29,740 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:29,947 DEBUG   {CmdSession:222} Cmd: interface optical-line 0/1
+2019-01-15 21:51:30,976 DEBUG   {CmdSession:371} Prompt: FL108_01(config-if-optical0/1)#
+2019-01-15 21:51:30,979 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:30,979 DEBUG   {CmdSession:222} Cmd: shutdown
+2019-01-15 21:51:31,091 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:31,092 DEBUG   {CmdSession:222} Cmd: exit
+2019-01-15 21:51:32,120 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:32,120 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:32,327 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:33,351 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:33,352 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:33,559 DEBUG   {CmdSession:222} Cmd: show port-extender
+2019-01-15 21:51:33,671 DEBUG   {CmdSession:242} Rsp: -----------------------------------------------------------------------------------------------------------------
+ OLT | PORT EXTENDER NAME    |       DEVICE SN       |      state      |     status    | Model Name |  Rx Power 
+-----------------------------------------------------------------------------------------------------------------
+
+State Statistics
+----------------------------------
+Pinned           : 0
+Autoprovisioned  : 0
+Blacklisted      : 0
+
+Status Statistics
+----------------------------------
+Online         : 0
+Synchronizing  : 0
+Offline        : 0
+Deleted        : 0
+
+Total          : 0
+
+2019-01-15 21:51:33,673 DEBUG   {Search:957} title : ['OLT', 'PORT_EXTENDER_NAME', 'DEVICE_SN', 'STATE', 'STATUS', 'MODEL_NAME', 'RX_POWER']
+2019-01-15 21:51:33,673 DEBUG   {Search:958} table : [['State Statistics'], ['Pinned           : 0'], ['Autoprovisioned  : 0'], ['Blacklisted      : 0'], ['Status Statistics'], ['Online         : 0'], ['Synchronizing  : 0'], ['Offline        : 0'], ['Deleted        : 0']]
+2019-01-15 21:51:33,673 DEBUG   {Search:970} _match_title_table row : ['State Statistics']
+2019-01-15 21:51:33,674 DEBUG   {Search:974} len(title) != len(row) : 7 != 1
+2019-01-15 21:51:33,674 DEBUG   {Search:1086} classify_table value is None
+2019-01-15 21:51:33,675 INFO    {TestBase:223} ----------------------------------------------------------------------
+2019-01-15 21:51:33,675 INFO    {TestBase:224}                        Finish tearDown_4_1_3_1                        
+2019-01-15 21:51:33,675 INFO    {TestBase:225} ======================================================================
+
+
+
+2019-01-15 21:51:33,676 INFO    {TestBase:218} ======================================================================
+2019-01-15 21:51:33,676 INFO    {TestBase:219}                          Start tearDownCommon                         
+2019-01-15 21:51:33,677 INFO    {TestBase:220} ----------------------------------------------------------------------
+2019-01-15 21:51:33,677 REPORT  {__init__:314} Collect DUT(s) after de-configuration context
+2019-01-15 21:51:33,887 DEBUG   {CmdSession:222} Cmd: show syslog local non-volatile
+2019-01-15 21:51:34,073 DEBUG   {CmdSession:242} Rsp: 2019-01-15T08:36:19  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:19  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO DISCOVERED serial-number ZNTS036396c4 EqD=244653 (onu 0/1,2)
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO DISCOVERED serial-number ZNTS036396c4 EqD=244653 (onu 0/1,2)
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getOpticalOnuInfo():309] Object does not exist at /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO ONU(0/1,2) ACTIVATION (SN:ZNTS036396c4)
+2019-01-15T08:36:20  GPON[1043]: GPON-INFO ONU(0/1,2) ACTIVATION (SN:ZNTS036396c4)
+2019-01-15T08:36:20  GPON[1043]: call _handle_addOnu(1001, 2, ZNTS036396c4) API
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onuActivated():857] activation: ZNTS036396c4:1001,2 
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getPonOnu():510] Object does not exist at /fiberlan/pon/ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  GPON[1043]: call _handle_updateOnuStatus(1001, 2, 3, 0) API
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 0 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:20  NSM[966]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():360] New ONU 
+2019-01-15T08:36:20  NSM[966]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ZNTS036396c4 
+2019-01-15T08:36:20  last message repeated 2 times
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/pon/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLan::getIfPrefixIndex():799] Object does not exist at /fiberlan/index/ifPrefix/ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  last message repeated 4 times
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/status/dev_alias/16 
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::parsePathType():195] Path ignored: /fiberlan/status/dev_alias/16 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16, is_updated: 0 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16 
+2019-01-15T08:36:20  GPON[1043]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::handleExtenderUpdated():471] No such onu activate yet: ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::handleOnuMapped():150] Newly ONU mapped 
+2019-01-15T08:36:20  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onuFixedCallback():1710] Onu Fixed cb 1001/2 ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:36:20  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:20  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:36:20  vtysh: SetCommand admin(10.55.195.22), cmd(log syslog) 
+2019-01-15T08:36:20  vtysh: SetCommand admin(10.55.195.22), cmd(log syslog) 
+2019-01-15T08:36:22  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:22  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:23  vtysh: SetCommand admin(10.55.195.22), cmd(clear coredump all) 
+2019-01-15T08:36:23  vtysh: SetCommand admin(10.55.195.22), cmd(clear coredump all) 
+2019-01-15T08:36:24  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:24  GPON[1043]: call _handle_updateOnuConfigMode(1001, 2, 4 2) API
+2019-01-15T08:36:24  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:36:24  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:36:24  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleOnuUpdate():369] Update onu(ZNTS036396c4/ZNTS036396c4) config mode from 0->2 
+2019-01-15T08:36:24  GPON[1043]: call _handle_updateMgmtIp(1001, 2, 131, 259, 0x01000102) API
+2019-01-15T08:36:24  GPON[1043]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/0 
+2019-01-15T08:36:24  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/0, is_updated: 0 
+2019-01-15T08:36:24  NSM[966]: [FiberLanNsm::handleUniUpdate():275] New UNI 
+2019-01-15T08:36:24  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/0 
+2019-01-15T08:36:24  NSM[966]: [FiberLan::getInterfaceConfig():646] Object does not exist at /fiberlan/cli_config/16/0 
+2019-01-15T08:36:25  NSM[966]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/99 
+2019-01-15T08:36:25  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:25  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16 
+2019-01-15T08:36:25  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16, is_updated: 1 
+2019-01-15T08:36:25  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/0, is_updated: 0 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/0 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/0 
+2019-01-15T08:36:25  GPON[1043]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::updateVlan():1450] vlan mode not set yet: 1001/2-0, devID: 16 
+2019-01-15T08:36:25  GPON[1043]: [FiberLan::getInterfaceQos():755] Object does not exist at /fiberlan/cli_config/16/0/qos 
+2019-01-15T08:36:25  GPON[1043]: [FiberLan::getInterfaceAuth():843] Object does not exist at /fiberlan/cli_config/16/0/auth 
+2019-01-15T08:36:25  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():219] uniAdminCallback 
+2019-01-15T08:36:26  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:26  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:27  vtysh: SetCommand admin(10.55.195.22), cmd(interface optical-line 0/1) 
+2019-01-15T08:36:27  vtysh: SetCommand admin(10.55.195.22), cmd(interface optical-line 0/1) 
+2019-01-15T08:36:28  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:36:28  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:36:28  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:36:28  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/1/vlan 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::getUniVlanInfo():1514] vlan mode not set yet!!! 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/2/vlan 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::getUniVlanInfo():1514] vlan mode not set yet!!! 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/3/vlan 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::getUniVlanInfo():1514] vlan mode not set yet!!! 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/4/vlan 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::getUniVlanInfo():1514] vlan mode not set yet!!! 
+2019-01-15T08:36:35  GPON[1043]: call _handle_addUni(1001, 2, 1, 130, 258) API
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:36:35  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  GPON[1043]: call _handle_addUni(1001, 2, 2, 130, 258) API
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/2 
+2019-01-15T08:36:35  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  GPON[1043]: call _handle_addUni(1001, 2, 3, 130, 258) API
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/3 
+2019-01-15T08:36:35  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  GPON[1043]: call _handle_addUni(1001, 2, 4, 130, 258) API
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getOpticalUniInfo():330] Object does not exist at /fiberlan/optical_line/1001/2/4 
+2019-01-15T08:36:35  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1, is_updated: 0 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::handleUniUpdate():275] New UNI 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceConfig():646] Object does not exist at /fiberlan/cli_config/16/1 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/2 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/0 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/0 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS036396c4/0, mode: 1, native: 1 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/0 1 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/3 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/0 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/4 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/0 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS036396c4/0, mode: 1, native: 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2619] Delete vlan mode: ZNTS036396c4/0, mode: 0, native: 0 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/0 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS036396c4/0, mode: 3, native: 1 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/1 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/1 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS036396c4/1, mode: 1, native: 1 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/1/vlan 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/2, is_updated: 0 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::handleUniUpdate():275] New UNI 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceConfig():646] Object does not exist at /fiberlan/cli_config/16/2 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/2 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/2 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS036396c4/2, mode: 1, native: 1 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/2/vlan 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/3, is_updated: 0 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::handleUniUpdate():275] New UNI 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceConfig():646] Object does not exist at /fiberlan/cli_config/16/3 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/3 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/3 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS036396c4/3, mode: 1, native: 1 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/3/vlan 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/4, is_updated: 0 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::handleUniUpdate():275] New UNI 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceConfig():646] Object does not exist at /fiberlan/cli_config/16/4 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/4 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/4 1 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS036396c4/4, mode: 1, native: 1 
+2019-01-15T08:36:35  NSM[966]: [FiberLan::getInterfaceVlanConfig():675] Object does not exist at /fiberlan/cli_config/16/4/vlan 
+2019-01-15T08:36:35  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:35  last message repeated 2 times
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/0/vlan/1, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/0/vlan/1 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/0/vlan, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/0/vlan/1 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/0/vlan/1 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/0/vlan/1, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/0/vlan/1 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/0/vlan, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1/vlan/1, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1/vlan/1 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1/vlan, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1/vlan 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/1 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/2/vlan/1, is_updated: 0 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/2/vlan, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceQos():755] Object does not exist at /fiberlan/cli_config/16/1/qos 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceAuth():843] Object does not exist at /fiberlan/cli_config/16/1/auth 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():219] uniAdminCallback 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/2/vlan/1 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/2, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/2/vlan 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/3/vlan/1, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/2 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/3/vlan, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/2 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceQos():755] Object does not exist at /fiberlan/cli_config/16/2/qos 
+2019-01-15T08:36:35  GPON[1043]: [FiberLan::getInterfaceAuth():843] Object does not exist at /fiberlan/cli_config/16/2/auth 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():219] uniAdminCallback 
+2019-01-15T08:36:35  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/3, is_updated: 0 
+2019-01-15T08:36:35  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/3/vlan/1 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/3/vlan 
+2019-01-15T08:36:36  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16, is_updated: 1 
+2019-01-15T08:36:36  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/4/vlan/1, is_updated: 0 
+2019-01-15T08:36:36  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/4/vlan, is_updated: 0 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/3 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/3 
+2019-01-15T08:36:36  GPON[1043]: [FiberLan::getInterfaceQos():755] Object does not exist at /fiberlan/cli_config/16/3/qos 
+2019-01-15T08:36:36  GPON[1043]: [FiberLan::getInterfaceAuth():843] Object does not exist at /fiberlan/cli_config/16/3/auth 
+2019-01-15T08:36:36  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/4, is_updated: 0 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():219] uniAdminCallback 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/4/vlan/1 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/4/vlan 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/4 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/4 
+2019-01-15T08:36:36  GPON[1043]: [FiberLan::getInterfaceQos():755] Object does not exist at /fiberlan/cli_config/16/4/qos 
+2019-01-15T08:36:36  GPON[1043]: [FiberLan::getInterfaceAuth():843] Object does not exist at /fiberlan/cli_config/16/4/auth 
+2019-01-15T08:36:36  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():219] uniAdminCallback 
+2019-01-15T08:36:37  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/4]
+2019-01-15T08:36:37  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/4]
+2019-01-15T08:36:37  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/3]
+2019-01-15T08:36:37  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/3]
+2019-01-15T08:36:37  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/2]
+2019-01-15T08:36:37  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/2]
+2019-01-15T08:36:42  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:42  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:43  vtysh: SetCommand admin(10.55.195.22), cmd(bridge 1 protocol ieee vlan-bridge) 
+2019-01-15T08:36:43  vtysh: SetCommand admin(10.55.195.22), cmd(bridge 1 protocol ieee vlan-bridge) 
+2019-01-15T08:36:43  vtysh: SetCommand admin(10.55.195.22), cmd(ip forwarding) 
+2019-01-15T08:36:43  vtysh: SetCommand admin(10.55.195.22), cmd(ip forwarding) 
+2019-01-15T08:36:45  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:45  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:46  GPON[1043]: call _handle_addUni(1001, 2, 1, 130, 258) API
+2019-01-15T08:36:46  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:46  GPON[1043]: call _handle_addUni(1001, 2, 2, 130, 258) API
+2019-01-15T08:36:46  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:46  GPON[1043]: call _handle_addUni(1001, 2, 3, 130, 258) API
+2019-01-15T08:36:46  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:46  GPON[1043]: call _handle_addUni(1001, 2, 4, 130, 258) API
+2019-01-15T08:36:46  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:46  GPON[1043]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ 
+2019-01-15T08:36:46  vtysh: SetCommand admin(10.55.195.22), cmd(bridge shutdown 1 bridge-forward) 
+2019-01-15T08:36:46  vtysh: SetCommand admin(10.55.195.22), cmd(bridge shutdown 1 bridge-forward) 
+2019-01-15T08:36:48  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:48  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:49  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:36:49  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:36:50  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:36:50  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:36:50  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:36:50  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:36:53  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:53  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:54  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:36:54  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:36:55  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:36:55  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:36:55  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:36:55  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:36:57  GPON[1043]: call _handle_addUni(1001, 2, 1, 130, 258) API
+2019-01-15T08:36:57  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:57  GPON[1043]: call _handle_addUni(1001, 2, 2, 130, 258) API
+2019-01-15T08:36:57  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:57  GPON[1043]: call _handle_addUni(1001, 2, 3, 130, 258) API
+2019-01-15T08:36:57  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:57  GPON[1043]: call _handle_addUni(1001, 2, 4, 130, 258) API
+2019-01-15T08:36:57  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:57  GPON[1043]: GPON-NOTI All Config-Sync: Start sync by auto. (portid/oltid/onuid:1/1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-NOTI All Config-Sync: Start sync by auto. (portid/oltid/onuid:1/1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO All Config-Sync: do sync(0/1363722280). (portid/oltid/onuid:1/1001/2,IP:1.0.1.2).
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO All Config-Sync: do sync(0/1363722280). (portid/oltid/onuid:1/1001/2,IP:1.0.1.2).
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkUp ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkUp ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:3 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:3 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:4 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:4 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:5 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:5 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:57  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:57  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:3 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:3 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:4 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:4 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:5 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: GPON-INFO [ONU-ALRM] linkDown ifindex:5 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldp():873] Object does not exist at /fiberlan/cli_config/16/1/lldp 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/1 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/2 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/3 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/4 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/5 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/6 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/7 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/1/lldp/8 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldp():873] Object does not exist at /fiberlan/cli_config/16/2/lldp 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/1 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/2 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/3 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/4 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/5 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/6 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/7 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/2/lldp/8 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldp():873] Object does not exist at /fiberlan/cli_config/16/3/lldp 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/1 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/2 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/3 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/4 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/5 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/6 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/7 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/3/lldp/8 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldp():873] Object does not exist at /fiberlan/cli_config/16/4/lldp 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/1 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/2 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/3 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/4 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/5 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/6 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/7 
+2019-01-15T08:36:58  GPON[1043]: [FiberLan::getInterfaceLldpMed():895] Object does not exist at /fiberlan/cli_config/16/4/lldp/8 
+2019-01-15T08:36:59  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:36:59  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:36:59  GPON[1043]: GPON-NOTI All Config-Sync: End sync. (portid/oltid/onuid:1/1001/2)
+2019-01-15T08:36:59  GPON[1043]: GPON-NOTI All Config-Sync: End sync. (portid/oltid/onuid:1/1001/2)
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1, is_updated: 1 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/2, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/1 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/2 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/3, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/3 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/4 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/4, is_updated: 1 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/0 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/0, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/2, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/2 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/2 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/3, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/3 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/3 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/4, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/4 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/4 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1, is_updated: 1 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/2 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/2, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/3 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/4 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/3, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/4, is_updated: 1 
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:36:59  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:36:59  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:00  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1, is_updated: 1 
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1, is_updated: 1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/1 
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/2, is_updated: 1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/1 
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/2, is_updated: 1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/2 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/2 
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/3, is_updated: 1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/2 
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/3, is_updated: 1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/2 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/3 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/3 
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/4, is_updated: 1 
+2019-01-15T08:37:00  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:37:00  vtysh: SetCommand admin(10.55.195.22), cmd(no shutdown) 
+2019-01-15T08:37:00  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/4, is_updated: 1 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/3 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/3 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/4 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/4 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/4 
+2019-01-15T08:37:00  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/4 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:00  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:00  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:00  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:00  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/4]
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/4]
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/3]
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/3]
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/2]
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/2]
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/1]
+2019-01-15T08:37:01  APC[964]: APC-INFO Alarm occur LinkDown cr [ZNTS036396c4/1]
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:01  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:01  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:02  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:02  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:04  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:37:04  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:37:05  vtysh: SetCommand admin(10.55.195.22), cmd(vlan 10 bridge 1) 
+2019-01-15T08:37:05  vtysh: SetCommand admin(10.55.195.22), cmd(vlan 10 bridge 1) 
+2019-01-15T08:37:05  GPON[1043]: GPON-INFO [ONU-ALRM] linkUp ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:37:05  GPON[1043]: GPON-INFO [ONU-ALRM] linkUp ifindex:2 from 1.0.1.2(portid-oltid/onuid:1-1001/2)
+2019-01-15T08:37:05  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:05  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniStatus(1001, 2, 0, 1) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniStatus(1001, 2, 1, 1) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1, is_updated: 1 
+2019-01-15T08:37:05  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:37:05  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniStatus(1001, 2, 2, 0) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniStatus(1001, 2, 3, 0) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1, is_updated: 1 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/1 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniStatus(1001, 2, 4, 0) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 0, 1000, 1) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 1, 1000, 1) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1, is_updated: 1 
+2019-01-15T08:37:05  NSM[966]: [FiberLanNsm::handleUniUpdate():295] Updated UNI 
+2019-01-15T08:37:05  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 2, 10, 2) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 3, 10, 2) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:05  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1, is_updated: 1 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/1 
+2019-01-15T08:37:05  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1, is_updated: 1 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1 
+2019-01-15T08:37:05  GPON[1043]: [FiberLanGpon::handleInterfaceUpdated():199] Interface CLI update: 1001, 2, ZNTS036396c4/1 
+2019-01-15T08:37:05  GPON[1043]: call _handle_updateUniSpeedDuplex(1001, 2, 4, 10, 2) API
+2019-01-15T08:37:05  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:07  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/1]
+2019-01-15T08:37:07  APC[964]: APC-INFO Alarm clear LinkDown cr [ZNTS036396c4/1]
+2019-01-15T08:37:07  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:07  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:08  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:37:08  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:37:09  GPON[1043]: call _handle_updateUniStatistics(1001, 2, 4) API
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/2/1/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/2/1/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/2/2/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/2/2/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/2/3/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/2/3/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/2/4/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/2/4/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1/up_stat, is_updated: 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/2/1/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 1024 Packets 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1/down_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/2/1/down_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 2244 Packets 33 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/2/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/2/up_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/2/2/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 0 Packets 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/2/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/2/down_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/2/2/down_stat up stat need callback 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/3/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 0 Packets 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/3/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/3/up_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/2/3/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 0 Packets 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/3/down_stat, is_updated: 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/4/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/2/3/down_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 0 Packets 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/4/up_stat, is_updated: 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/4/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/2/4/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 0 Packets 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/4/down_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/2/4/down_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 0 Packets 0 
+2019-01-15T08:37:09  GPON[1043]: call _handle_updateUniStatistics(1001, 1, 4) API
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/1/1/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/1/1/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/1/2/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/1/2/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/1/3/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/1/3/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatUp():351] Object does not exist at /fiberlan/optical_line/1001/1/4/up_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLan::getOpticalUniStatDn():372] Object does not exist at /fiberlan/optical_line/1001/1/4/down_stat 
+2019-01-15T08:37:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/1/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/1/up_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/1/1/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 65280 Packets 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/1/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/1/down_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/1/1/down_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 1823609 Packets 20702 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/2/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/2/up_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/1/2/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 91264 Packets 250 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/2/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/2/down_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/1/2/down_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 1548896 Packets 20937 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/3/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/3/up_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/1/3/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 0 Packets 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/3/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/3/down_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/1/3/down_stat up stat need callback 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/4/up_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 0 Packets 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/4/up_stat, is_updated: 0 
+2019-01-15T08:37:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/4/down_stat 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/1/4/up_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 0 Packets 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/4/down_stat, is_updated: 0 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/1/4/down_stat up stat need callback 
+2019-01-15T08:37:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 0 Packets 0 
+2019-01-15T08:37:09  vtysh: SetCommand admin(10.55.195.22), cmd(vlan 11 bridge 1) 
+2019-01-15T08:37:09  vtysh: SetCommand admin(10.55.195.22), cmd(vlan 11 bridge 1) 
+2019-01-15T08:37:10  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:10  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:12  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:12  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:15  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:16  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:15  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:16  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:17  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:17  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:17  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:17  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:17  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:17  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:18  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode trunk) 
+2019-01-15T08:37:18  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode trunk) 
+2019-01-15T08:37:19  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan add 10) 
+2019-01-15T08:37:19  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan add 10) 
+2019-01-15T08:37:19  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:19  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:21  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:21  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:24  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:25  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:24  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:25  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:26  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:26  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:26  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:26  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:27  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:27  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:37:28  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode trunk) 
+2019-01-15T08:37:28  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode trunk) 
+2019-01-15T08:37:28  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan add 11) 
+2019-01-15T08:37:28  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan add 11) 
+2019-01-15T08:37:28  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:28  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:30  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:30  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:33  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:34  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:37:33  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:34  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:37:35  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:35  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:36  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:36  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:36  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:37:36  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:37:37  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode access) 
+2019-01-15T08:37:37  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode access) 
+2019-01-15T08:37:37  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1/vlan_update, is_updated: 0 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::handleVlanUpdate():671] Start Vlan update 1001/2/1 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:37:37  vtysh: SetCommand admin(10.55.195.22), cmd(switchport access vlan 10) 
+2019-01-15T08:37:37  vtysh: SetCommand admin(10.55.195.22), cmd(switchport access vlan 10) 
+2019-01-15T08:37:37  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/1 1 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/1 10 
+2019-01-15T08:37:37  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/0 10 
+2019-01-15T08:37:37  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1/vlan_update, is_updated: 0 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1/vlan/1 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1/vlan/1 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1/vlan/10 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1/vlan/10, is_updated: 0 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/0/vlan/10 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/0/vlan/10, is_updated: 0 
+2019-01-15T08:37:37  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:37:37  GPON[1043]: [FiberLanGpon::handleVlanUpdate():671] Start Vlan update 1001/2/1 
+2019-01-15T08:37:37  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:37  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:40  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:40  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:42  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:44  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:37:42  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:37:44  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:37:45  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:45  vtysh: SetCommand admin(10.55.195.22), cmd(switchport) 
+2019-01-15T08:37:45  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:45  vtysh: SetCommand admin(10.55.195.22), cmd(bridge-group 1) 
+2019-01-15T08:37:45  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:37:45  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:37:46  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode trunk) 
+2019-01-15T08:37:46  vtysh: SetCommand admin(10.55.195.22), cmd(switchport mode trunk) 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/2 1 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS03635c06/2 1 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS03635c06/2 1 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS03635c06/2, mode: 1, native: 1 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2619] Delete vlan mode: ZNTS03635c06/2, mode: 0, native: 0 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS03635c06/2 1 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVlanConfig():2621] Add vlan mode: ZNTS03635c06/2, mode: 3, native: 1 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15/2/vlan_update, is_updated: 0 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan/1 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan/1 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15/2/vlan/1, is_updated: 0 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15/2/vlan/1 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15/2/vlan 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15/2/vlan, is_updated: 0 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::handleVlanUpdate():671] Start Vlan update 1001/1/2 
+2019-01-15T08:37:46  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan add 11) 
+2019-01-15T08:37:46  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan add 11) 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS03635c06/2 11 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS03635c06/0 11 
+2019-01-15T08:37:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15/2/vlan_update, is_updated: 0 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15/2/vlan/11 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15/2/vlan/11, is_updated: 0 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15/0/vlan/11 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15/0/vlan/11, is_updated: 0 
+2019-01-15T08:37:46  GPON[1043]: [FiberLanGpon::handleVlanUpdate():671] Start Vlan update 1001/1/2 
+2019-01-15T08:37:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:37:46  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:37:46  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:39:09  GPON[1043]: call _handle_updateUniStatistics(1001, 2, 4) API
+2019-01-15T08:39:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:39:09  last message repeated 7 times
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1/up_stat, is_updated: 1 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():118] path /fiberlan/optical_line/1001/2/1/up_stat up stat need callback 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::handleUniUpStatsUpdate():212] UP:Octets 1536 Packets 0 
+2019-01-15T08:39:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1/up_stat 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2/1/down_stat, is_updated: 1 
+2019-01-15T08:39:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2/1/down_stat 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/2/1/down_stat up stat need callback 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 3876 Packets 57 
+2019-01-15T08:39:09  GPON[1043]: call _handle_updateUniStatistics(1001, 1, 4) API
+2019-01-15T08:39:09  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:39:09  last message repeated 7 times
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/1/down_stat, is_updated: 1 
+2019-01-15T08:39:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/1/down_stat 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/1/1/down_stat up stat need callback 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 1825753 Packets 20726 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1/2/down_stat, is_updated: 1 
+2019-01-15T08:39:09  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1/2/down_stat 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::onUpdated():122] path /fiberlan/optical_line/1001/1/2/down_stat up stat need callback 
+2019-01-15T08:39:09  NSM[966]: [FiberLanNsm::handleUniDnStatsUpdate():165] DN:Octets 1551040 Packets 20961 
+2019-01-15T08:40:14  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:14  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:15  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:40:15  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:40:16  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan remove 10) 
+2019-01-15T08:40:16  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan remove 10) 
+2019-01-15T08:40:16  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:16  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:17  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:17  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1, is_updated: 1 
+2019-01-15T08:40:17  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS03635c06, ifPrefix ZNTS03635c06 
+2019-01-15T08:40:17  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:17  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1 
+2019-01-15T08:40:17  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:17  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:40:17  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:40:17  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:40:17  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:19  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:19  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:20  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:40:20  vtysh: SetCommand admin(10.55.195.22), cmd(interface tengigabitethernet 0/9) 
+2019-01-15T08:40:21  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan remove 11) 
+2019-01-15T08:40:21  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan remove 11) 
+2019-01-15T08:40:21  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:21  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:24  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:24  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:25  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:40:25  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS036396c4/1) 
+2019-01-15T08:40:26  vtysh: SetCommand admin(10.55.195.22), cmd(no switchport access vlan) 
+2019-01-15T08:40:26  vtysh: SetCommand admin(10.55.195.22), cmd(no switchport access vlan) 
+2019-01-15T08:40:26  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/1 10 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/0 10 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::updateInterfaceVid():2652] Add vlan: ZNTS036396c4/1 1 
+2019-01-15T08:40:26  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1/vlan_update, is_updated: 0 
+2019-01-15T08:40:26  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:40:26  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1/vlan/10 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1/vlan/10 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/0/vlan/10 
+2019-01-15T08:40:26  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/0/vlan/10 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16/1/vlan/1, is_updated: 0 
+2019-01-15T08:40:26  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:40:26  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16/1/vlan/1 
+2019-01-15T08:40:26  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1/vlan_update 
+2019-01-15T08:40:26  GPON[1043]: [FiberLanGpon::handleVlanUpdate():671] Start Vlan update 1001/2/1 
+2019-01-15T08:40:26  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:26  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:28  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:28  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:30  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:40:30  vtysh: SetCommand admin(10.55.195.22), cmd(interface ZNTS03635c06/2) 
+2019-01-15T08:40:31  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan remove 11) 
+2019-01-15T08:40:31  vtysh: SetCommand admin(10.55.195.22), cmd(switchport trunk allowed vlan remove 11) 
+2019-01-15T08:40:31  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:31  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/2 11 
+2019-01-15T08:40:31  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/0 11 
+2019-01-15T08:40:31  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15/2/vlan_update, is_updated: 0 
+2019-01-15T08:40:31  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:40:31  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan/11 
+2019-01-15T08:40:31  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan/11 
+2019-01-15T08:40:31  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/0/vlan/11 
+2019-01-15T08:40:31  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/0/vlan/11 
+2019-01-15T08:40:31  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:40:31  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan_update 
+2019-01-15T08:40:31  GPON[1043]: [FiberLanGpon::handleVlanUpdate():671] Start Vlan update 1001/1/2 
+2019-01-15T08:40:31  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:31  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:33  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:33  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:35  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:40:35  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:40:36  vtysh: SetCommand admin(10.55.195.22), cmd(no vlan 10 bridge 1) 
+2019-01-15T08:40:36  vtysh: SetCommand admin(10.55.195.22), cmd(no vlan 10 bridge 1) 
+2019-01-15T08:40:36  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:36  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:38  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:38  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:39  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:40:39  vtysh: SetCommand admin(10.55.195.22), cmd(vlan database) 
+2019-01-15T08:40:40  vtysh: SetCommand admin(10.55.195.22), cmd(no vlan 11 bridge 1) 
+2019-01-15T08:40:40  vtysh: SetCommand admin(10.55.195.22), cmd(no vlan 11 bridge 1) 
+2019-01-15T08:40:41  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:41  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:43  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:43  vtysh: SetCommand admin(10.55.195.22), cmd(conf t) 
+2019-01-15T08:40:44  vtysh: SetCommand admin(10.55.195.22), cmd(interface optical-line 0/1) 
+2019-01-15T08:40:44  vtysh: SetCommand admin(10.55.195.22), cmd(interface optical-line 0/1) 
+2019-01-15T08:40:45  vtysh: SetCommand admin(10.55.195.22), cmd(shutdown) 
+2019-01-15T08:40:45  vtysh: SetCommand admin(10.55.195.22), cmd(shutdown) 
+2019-01-15T08:40:45  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:45  vtysh: SetCommand admin(10.55.195.22), cmd(exit) 
+2019-01-15T08:40:45  PRAS[907]: HSL-NOTI interface optical0/1 link down
+2019-01-15T08:40:45  PRAS[907]: HSL-NOTI interface optical0/1 link down
+2019-01-15T08:40:45  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:45  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001 
+2019-01-15T08:40:45  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001, is_updated: 1 
+2019-01-15T08:40:45  GPON[1043]: GPON-INFO ONU(0/1,1) DEACTIVATION (Reason: Admin control(OLT deactivate))
+2019-01-15T08:40:45  GPON[1043]: GPON-INFO ONU(0/1,1) DEACTIVATION (Reason: Admin control(OLT deactivate))
+2019-01-15T08:40:45  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:45  GPON[1043]: call _handle_updateOnuStatus(1001, 1, 1, 20) API
+2019-01-15T08:40:45  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:45  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1, is_updated: 1 
+2019-01-15T08:40:45  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1 
+2019-01-15T08:40:45  GPON[1043]: GPON-INFO ONU(0/1,2) DEACTIVATION (Reason: Admin control(OLT deactivate))
+2019-01-15T08:40:45  GPON[1043]: GPON-INFO ONU(0/1,2) DEACTIVATION (Reason: Admin control(OLT deactivate))
+2019-01-15T08:40:45  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS03635c06, ifPrefix ZNTS03635c06 
+2019-01-15T08:40:45  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:45  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1, is_updated: 1 
+2019-01-15T08:40:45  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS03635c06, ifPrefix ZNTS03635c06 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1 
+2019-01-15T08:40:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:46  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:46  GPON[1043]: call _handle_updateOnuStatus(1001, 2, 1, 20) API
+2019-01-15T08:40:46  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/4 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/4 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/4 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/3 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/3 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/3 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/2 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/2 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/2 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/1 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/1 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/1 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS03635c06/0 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/0 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS03635c06/0 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:46  GPON[1043]: GPON-INFO OLT(0/1) DEACTIVATION 
+2019-01-15T08:40:46  GPON[1043]: GPON-INFO OLT(0/1) DEACTIVATION 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/4 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/4 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/4 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/3 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/3 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/3 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/2 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/2 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/2 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/1 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/1 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/1 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::updateInterfaceVid():2654] Delete vlan: ZNTS036396c4/0 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/0 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::setInterfaceFlag():1369] Interface ZNTS036396c4/0 is being deleted. Ignore interface flag update 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/4/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15, is_updated: 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/4/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/3/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/3/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/1/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/0/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/1/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/0/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/15 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/15, is_updated: 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 15 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 5 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/4/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16, is_updated: 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/4/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/3/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/2/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/3/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/2/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/0/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1/vlan/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/0/vlan/1 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/4/vlan 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/4 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/3/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/4/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/4 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/3 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 15 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 4 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/3/vlan 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/3 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 15 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/2 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/1/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 3 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/2 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 15 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 2 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/1/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 15 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 1 
+2019-01-15T08:40:46  NSM[966]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/0/vlan 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15/0 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/0/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15/0 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 15 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/cli_config/16 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/cli_config/16, is_updated: 1 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 16 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 5 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/15 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/4/vlan 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/4 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/15 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLan::getExtenderConfig():624] Object does not exist at /fiberlan/cli_config/15 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():421] Delete ZNTS03635c06, 15 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/3/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/4/vlan 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/3 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/4 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 16 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 4 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/3/vlan 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/3 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 16 
+2019-01-15T08:40:46  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 3 
+2019-01-15T08:40:46  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/status/dev_alias/15 
+2019-01-15T08:40:46  GPON[1043]: [FiberLan::parsePathType():195] Path ignored: /fiberlan/status/dev_alias/15 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/status/device/ZNTS03635c06 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::handleOnuUnMapped():602] Start Onu Delete OltId:1001, OnuId:1, DevAliasKey:15 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::delOnu():1412] Detech onu: OltId:1001, OnuId:1, UniNum:4, Serial:ZNTS03635c06, OperStatus:1, Reason:20, IsFiexed:1, modelName:2804D, configMode:2, isDeleted:0, rxPower:40000(1001,1 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/2/vlan 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/2 
+2019-01-15T08:40:47  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 16 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 2 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1/vlan 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/1 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 16 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():408] Cannot delete size: 1 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16/0 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():402] Cannot delete id: 16 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/2/vlan 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/cli_config/16 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/2 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():394] check if deleted 
+2019-01-15T08:40:47  NSM[966]: [FiberLan::getExtenderConfig():624] Object does not exist at /fiberlan/cli_config/16 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::checkInterfaceRemoveDone():421] Delete ZNTS036396c4, 16 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1/vlan 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/1 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/0/vlan 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16/0 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/cli_config/16 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/status/dev_alias/16 
+2019-01-15T08:40:47  GPON[1043]: [FiberLan::parsePathType():195] Path ignored: /fiberlan/status/dev_alias/16 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::handleOnuUnMapped():602] Start Onu Delete OltId:1001, OnuId:2, DevAliasKey:16 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::delOnu():1412] Detech onu: OltId:1001, OnuId:2, UniNum:4, Serial:ZNTS036396c4, OperStatus:1, Reason:20, IsFiexed:1, modelName:2804D, configMode:2, isDeleted:0, rxPower:40000(1001,2 
+2019-01-15T08:40:47  GPON[1043]: [Yail::ObexObject::getSerializedObject():69] make serialized object 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/1, is_updated: 1 
+2019-01-15T08:40:47  NSM[966]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ZNTS03635c06 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS03635c06, ifPrefix ZNTS03635c06 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/0 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/1/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/1/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/1 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/2/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/2/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/2 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/3/up_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/1 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/0 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/3/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/3 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/4/up_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/1/up_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/1/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/1 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/4/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1/4 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/1 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/2/up_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/2/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/2 
+2019-01-15T08:40:47  NSM[966]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS03635c06 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/3/up_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/3/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/3 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/4/up_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/4/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1/4 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/1 
+2019-01-15T08:40:47  GPON[1043]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS03635c06 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::continueOnuUnMapped():617] End onu delete OltId:1001, OnuId:1, UniNum:4, Serial:ZNTS03635c06, OperStatus:1, Reason:20, IsFiexed:1, modelName:2804D, configMode:2, isDeleted:1, rxPower:40000 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onUpdated():110] path /fiberlan/optical_line/1001/2, is_updated: 1 
+2019-01-15T08:40:47  NSM[966]: [FiberLan::getSerialIndex():821] Object does not exist at /fiberlan/index/serial/ZNTS036396c4 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::handleOnuUpdate():358] serial ZNTS036396c4, ifPrefix ZNTS036396c4 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::handleOnuUpdate():363] Updated ONU 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/0 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onUpdated():96] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/0 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/1/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/1/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/1/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/1/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/1 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/2/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/2/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/2/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/2 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/2/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/2 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/3/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/3/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/3/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/3 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/3/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/3 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/4/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/4/up_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/4/down_stat 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2/4 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/4/down_stat 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2/4 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:40:47  NSM[966]: [FiberLanNsm::onDeleted():376] path /fiberlan/optical_line/1001/2 
+2019-01-15T08:40:47  GPON[1043]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::continueOnuUnMapped():617] End onu delete OltId:1001, OnuId:2, UniNum:4, Serial:ZNTS036396c4, OperStatus:1, Reason:20, IsFiexed:1, modelName:2804D, configMode:2, isDeleted:1, rxPower:40000 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/pon/ZNTS03635c06 
+2019-01-15T08:40:47  NSM[966]: [FiberLan::getExtenderInfo():246] Object does not exist at /fiberlan/status/device/ZNTS036396c4 
+2019-01-15T08:40:47  GPON[1043]: [FiberLanGpon::onDeleted():545] path /fiberlan/pon/ZNTS036396c4 
+2019-01-15T08:40:47  APC[964]: APC-INFO Alarm occur AdminDown cr [optical0/1]
+2019-01-15T08:40:47  APC[964]: APC-INFO Alarm occur AdminDown cr [optical0/1]
+
+2019-01-15 21:51:34,291 DEBUG   {CmdSession:222} Cmd: show run
+2019-01-15 21:51:34,467 DEBUG   {CmdSession:242} Rsp: !
+no service password-encryption
+!
+hostname FL108_01
+!
+syslog output info local volatile
+syslog output info local non-volatile
+syslog output debug local non-volatile
+log syslog
+!
+login connect 8
+!
+snmp community ro fmnLazabTR
+!
+fan operation on
+!
+ip domain-lookup
+ip icmp-broadcast
+bridge 1 protocol ieee vlan-bridge
+no mls qos
+bridge shutdown 1 bridge-forward
+!
+vlan database
+ vlan 7 bridge 1 state enable
+ vlan 7 bridge 1 port-extender management
+!
+!
+interface mgmt
+ ip address 10.55.195.92/24
+ no shutdown
+!
+interface lo
+ no shutdown
+!
+interface optical-line 0/1
+ switchport
+ shutdown
+!
+interface optical-line 0/2
+ switchport
+ no shutdown
+!
+interface optical-line 0/3
+ switchport
+ no shutdown
+!
+interface optical-line 0/4
+ switchport
+ no shutdown
+!
+interface optical-line 0/5
+ switchport
+ no shutdown
+!
+interface optical-line 0/6
+ switchport
+ no shutdown
+!
+interface optical-line 0/7
+ switchport
+ no shutdown
+!
+interface optical-line 0/8
+ switchport
+ no shutdown
+!
+interface tengigabitethernet 0/9
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode trunk
+ no shutdown
+!
+interface tengigabitethernet 0/10
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode access
+ no shutdown
+!
+interface tengigabitethernet 0/11
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode trunk
+ no shutdown
+!
+interface tengigabitethernet 0/12
+ speed 1000
+ switchport
+ bridge-group 1
+ switchport mode trunk
+ no shutdown
+!
+interface vlan 1.7
+ ip address 1.0.0.1/8
+ no shutdown
+!
+ip route 0.0.0.0/0 10.55.195.254
+!
+line con 0
+ login
+line vty 0 7
+ login
+!
+apc
+!
+!
+!
+end
+
+
+2019-01-15 21:51:34,675 DEBUG   {CmdSession:222} Cmd: show coredump
+2019-01-15 21:51:34,788 DEBUG   {CmdSession:242} Rsp: ----------------------------------------------------------
+ filename                                         size             
+----------------------------------------------------------
+% coredump not found
+
+2019-01-15 21:51:34,788 DEBUG   {Search:957} title : ['FILE_NAME', 'SIZE']
+2019-01-15 21:51:34,789 DEBUG   {Search:958} table : [['%', 'coredump', 'not', 'found']]
+2019-01-15 21:51:34,790 DEBUG   {Search:970} _match_title_table row : ['%', 'coredump', 'not', 'found']
+2019-01-15 21:51:34,790 DEBUG   {Search:974} len(title) != len(row) : 2 != 4
+2019-01-15 21:51:34,791 DEBUG   {Search:1086} classify_table value is None
+2019-01-15 21:51:34,999 DEBUG   {CmdSession:222} Cmd: clear syslog local non-volatile
+2019-01-15 21:51:35,115 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:35,323 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:36,347 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:36,348 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:36,555 DEBUG   {CmdSession:222} Cmd: no syslog output debug local non-volatile
+2019-01-15 21:51:36,679 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:36,887 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:37,912 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:37,912 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:38,119 DEBUG   {CmdSession:222} Cmd: conf t
+2019-01-15 21:51:39,144 DEBUG   {CmdSession:371} Prompt: FL108_01(config)#
+2019-01-15 21:51:39,144 DEBUG   {CmdSession:242} Rsp: Enter configuration commands, one per line.  End with CNTL/Z.
+ 
+2019-01-15 21:51:39,351 DEBUG   {CmdSession:222} Cmd: no log syslog
+2019-01-15 21:51:39,491 DEBUG   {CmdSession:242} Rsp: 
+2019-01-15 21:51:39,699 DEBUG   {CmdSession:222} Cmd: end
+2019-01-15 21:51:40,723 DEBUG   {CmdSession:371} Prompt: FL108_01#
+2019-01-15 21:51:40,724 DEBUG   {CmdSession:242} Rsp:  
+2019-01-15 21:51:40,725 REPORT  {__init__:314} Interface Status Corrected: []
+2019-01-15 21:51:40,725 TEARDN  {__init__:293}  
+2019-01-15 21:51:40,726 TEARDN  {__init__:294} #########################
+2019-01-15 21:51:40,726 TEARDN  {__init__:296} [3] Clear DUT(s) session
+2019-01-15 21:51:40,946 INFO    {TestBase:223} ----------------------------------------------------------------------
+2019-01-15 21:51:40,947 INFO    {TestBase:224}                         Finish tearDownCommon                         
+2019-01-15 21:51:40,947 INFO    {TestBase:225} ======================================================================
+
+
+
+2019-01-15 21:51:40,948 INFO    {YTestLogging:266} **********************************************************************
+2019-01-15 21:51:40,948 INFO    {YTestLogging:267} Test Dut : FL108_01
+2019-01-15 21:51:40,949 INFO    {YTestLogging:268} Elapsed Time: 0:04:58.427834
+2019-01-15 21:51:40,949 INFO    {YTestLogging:269} test_4_1_3_1 (FiberLan.Bridge.vlan.Vlan) 8021q_based ..... OK
