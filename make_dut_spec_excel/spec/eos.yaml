@@ -1,0 +1,15 @@
+name: eos
+
+feature:
+  system:
+    type: SystemArista1
+    os: OsArista1
+    time: TimeArista1
+  ip:
+    type: IpArista1
+    route: RouteArista1
+  ospf:
+    type: OspfArista1
+    interface: InterfaceArista1
+  bgp:
+    type: BgpArista1

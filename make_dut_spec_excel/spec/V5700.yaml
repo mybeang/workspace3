@@ -1,0 +1,166 @@
+name: V5700
+
+init_interface_info:
+
+local_interface_info:
+  - type: management
+    name: management
+    alias: mgmt
+
+card_info:
+  siu-ge4:
+    type: ethernet
+    ports: 4
+    name: gigabitethernet
+    alias: ge
+  siu-ge6:
+    type: ethernet
+    ports: 6
+    name: gigabitethernet
+    alias: ge
+  siu-ge8:
+    type: ethernet
+    ports: 8
+    name: gigabitethernet
+    alias: ge
+  iu-ge4:
+    type: ethernet
+    ports: 4
+    name: gigabitethernet
+    alias: ge
+  iu-ge6:
+    type: ethernet
+    ports: 6
+    name: gigabitethernet
+    alias: ge
+  iu-gt4:
+    type: ethernet
+    ports: 4
+    name: gigabitethernet
+    alias: ge
+  iu-gt6:
+    type: ethernet
+    ports: 6
+    name: gigabitethernet
+    alias: ge
+  iu-gepon4:
+    type: epon
+    ports: 4
+    name: epon
+    alias: epon
+  iu-10ge1:
+    type: ethernet
+    ports: 1
+    name: tengigabitethernet
+    alias: xe
+  niu-ge2:
+    type: ethernet
+    ports: 2
+    name: gigabitethernet
+    alias: ge
+  niu-ge4:
+    type: ethernet
+    ports: 4
+    name: gigabitethernet
+    alias: ge
+  niu-ge8:
+    type: ethernet
+    ports: 8
+    name: gigabitethernet
+    alias: ge
+  niu-10ge2:
+    type: ethernet
+    ports: 2
+    name: tengigabitethernet
+    alias: xe
+
+feature:
+  aaa:
+    type: AaaDasan3
+  bootloader:
+    type: BootLoaderDasan1
+  dhcp:
+    type: DhcpDasan1
+    relay: RelayDasan1
+    option82: Option82Dasan2
+    option_format: OptionFormatDasan2
+  system:
+    type: SystemDasan3
+    os: OsDasan3
+    user: UserDasan3
+    time: TimeDasan3
+    coredump: CoreDumpDasan3
+    config: ConfigDasan2
+    log: LogDasan2
+    service: ServiceDasan3
+    mirror: MirrorDasan3
+    redundancy: RedundancyDasan1
+  interface:
+    type: InterfaceDasan3
+    port: PortDasan8
+    mgmt: MgmtDasan1
+    vlan: VlanDasan1
+    gpon: GponDasan1
+  vlan:
+    type: VlanDasan3
+    port: PortDasan3
+    fdb: FdbDasan3
+  slot:
+    type: SlotDasan2
+  fdb:
+    type: FdbDasan3
+  loop_detect:
+    type: LoopDetectDasan3
+  max_host:
+    type: MaxHostDasan3
+  ip:
+    type: IpDasan3
+    arp: ArpDasan3
+    route: RouteDasan3
+    icmp: IcmpDasan3
+    multicast: MulticastDasan2
+  filter:
+    type: FilterDasan2
+    prefix_list: PrefixListDasan1
+    access_list: AccessListDasan3
+    ip_access_list: IpAccessListDasan2
+    flow_admin: FlowAdminDasan1
+    flow: FlowDasan1
+    igmp_profile: IgmpProfileDasan1
+  route_map:
+    type: RouteMapDasan3
+    match: MatchDasan3
+    set: SetDasan3
+  tacacs:
+    type: TacacsDasan3
+  radius:
+    type: RadiusDasan3
+  ospf:
+    type: OspfDasan2
+    interface: InterfaceDasan2
+  security:
+    type: SecurityDasan3
+    ddos: DdosDasan3
+    guard: GuardDasan2
+    dhcp_snooping: DhcpSnoopingDasan2
+    discard: DiscardDasan3
+    access_mgmt: AccessMgmtDasan3
+  bgp:
+    type: BgpDasan3
+  link_aggregation:
+    type: LinkAggregationDasan3
+    port: PortDasan3
+  igmp:
+    type: IgmpDasan2
+    snooping: SnoopingDasan2
+    fast_leave: FastLeaveDasan2
+    security: SecurityDasan2
+    group: GroupDasan3
+    interface: InterfaceDasan2
+  pim:
+    type: PimDasan3
+    interface: InterfaceDasan3
+  qos:
+    type: QosDasan3
+    flows: FlowsDasan1
+    policy: PolicyDasan2

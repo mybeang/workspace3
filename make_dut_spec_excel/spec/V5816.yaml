@@ -1,0 +1,137 @@
+name: V5816
+
+init_interface_info:
+  - type: gpon
+    slot_id:
+    ports: 16
+    name:
+    alias:
+    start: 1
+  - type: ethernet
+    slot_id:
+    ports: 8
+    name:
+    alias:
+    start: 17
+
+local_interface_info:
+  - type: management
+    name: mgmt
+    alias:
+
+card_info:
+
+feature:
+  aaa:
+    type: AaaDasan2
+  bootloader:
+    type: BootLoaderDasan1
+  dhcp:
+    type: DhcpDasan1
+    relay: RelayDasan1
+    option82: Option82Dasan1
+    option_format: OptionFormatDasan1
+  system:
+    type: SystemDasan2
+    os: OsDasan2
+    user: UserDasan2
+    time: TimeDasan2
+    coredump: CoreDumpDasan5
+    config: ConfigDasan2
+    log: LogDasan2
+    service: ServiceDasan2
+    mirror: MirrorDasan2
+  interface:
+    type: InterfaceDasan2
+    port: PortDasan2
+    mgmt: MgmtDasan1
+    vlan: VlanDasan2
+    gpon: GponDasan2
+    port_security: PortSecurityDasan1
+  vlan:
+    type: VlanDasan2
+    port: PortDasan2
+    fdb: FdbDasan2
+  fdb:
+    type: FdbDasan2
+  loop_detect:
+    type: LoopDetectDasan2
+  max_host:
+    type: MaxHostDasan2
+  ip:
+    type: IpDasan2
+    arp: ArpDasan2
+    route: RouteDasan2
+    icmp: IcmpDasan2
+    multicast: MulticastDasan2
+  filter:
+    type: FilterDasan2
+    prefix_list: PrefixListDasan1
+    access_list: AccessListDasan2
+    ip_access_list: IpAccessListDasan2
+    flow_admin: FlowAdminDasan1
+    flow: FlowDasan1
+    igmp_profile: IgmpProfileDasan1
+  route_map:
+    type: RouteMapDasan2
+    match: MatchDasan2
+    set: SetDasan2
+  tacacs:
+    type: TacacsDasan2
+  radius:
+    type: RadiusDasan2
+  ospf:
+    type: OspfDasan2
+    interface: InterfaceDasan2
+  security:
+    type: SecurityDasan2
+    ddos: DdosDasan2
+    guard: GuardDasan1
+    dhcp_snooping: DhcpSnoopingDasan1
+    discard: DiscardDasan2
+    access_mgmt: AccessMgmtDasan2
+  bgp:
+    type: BgpDasan2
+  link_aggregation:
+    type: LinkAggregationDasan2
+    port: PortDasan2
+  igmp:
+    type: IgmpDasan2
+    snooping: SnoopingDasan2
+    fast_leave: FastLeaveDasan2
+    security: SecurityDasan2
+    group: GroupDasan2
+    interface: InterfaceDasan2
+  pim:
+    type: PimDasan2
+    interface: InterfaceDasan2
+  qos:
+    type: QosDasan3
+    flows: FlowsDasan1
+    policy: PolicyDasan1
+  gpon:
+    type: GponDasan1
+    olt: OltDasan1
+  dba_profile:
+    type: DbaProfileDasan1
+  traffic_profile:
+    type: TrafficProfileDasan1
+    tcont: TcontDasan1
+    mapper: MapperDasan1
+    bridge_ani: BridgeAniDasan1
+    bridge_uni: BridgeUniDasan1
+  onu_profile:
+    type: OnuProfileDasan1
+  pm_profile:
+    type: PmProfileDasan1
+  mcast_profile:
+    type: MulticastProfileDasan1
+    igmp: IgmpDasan1
+    igmp_acl: IgmpAclDasan1
+    igmp_tag_ctrl: IgmpTagCtrlDasan1
+    igmp_querier: IgmpQuerierDasan1
+  ext_vlan_profile:
+    type: ExtendedVlanProfileDasan1
+    untag: UnTagDasan1
+    single_tag: SingleTagDasan1
+    double_tag: DoubleTagDasan1

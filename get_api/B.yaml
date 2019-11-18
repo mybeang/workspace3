@@ -1,0 +1,7 @@
+name: B
+
+feature:
+  l2:
+    - set_mac
+    - get_mac
+

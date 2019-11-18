@@ -1,0 +1,23 @@
+name: ZNID_2804D
+
+init_interface_info:
+  - type: ethernet
+    slot_id:
+    ports: 4
+    name:
+    alias:
+    start: 1
+
+local_interface_info:
+  - type: management
+    name: mgmt
+    alias: mgmt
+
+card_info:
+
+feature:
+  interface:
+    type: InterfaceZhone1
+    port: PortZhone1
+    mgmt: MgmtZhone1
+    vlan: VlanZhone1

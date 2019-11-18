@@ -1,0 +1,2222 @@
+{
+    "system": {
+        "self": {
+            "SystemArista1": [
+                "eos"
+            ],
+            "SystemDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "SystemCisco1": [
+                "ios"
+            ],
+            "SystemDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "SystemDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "os": {
+            "OsArista1": [
+                "eos"
+            ],
+            "OsDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "OsCisco1": [
+                "ios"
+            ],
+            "OsDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "OsDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "time": {
+            "TimeArista1": [
+                "eos"
+            ],
+            "TimeDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "TimeCisco1": [
+                "ios"
+            ],
+            "TimeDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "TimeDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "user": {
+            "UserDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "UserDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "UserDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "coredump": {
+            "CoreDumpDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "CoreDumpDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "CoreDumpDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "CoreDumpDasan5": [
+                "V5816"
+            ],
+            "CoreDumpDasan4": [
+                "V8300"
+            ]
+        },
+        "config": {
+            "ConfigDasan3": [
+                "FL108"
+            ],
+            "ConfigDasan1": [
+                "M1200",
+                "M2400",
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "ConfigDasan2": [
+                "V5700",
+                "V5816",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "log": {
+            "LogDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "LogDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "LogDasan3": [
+                "V8300"
+            ]
+        },
+        "service": {
+            "ServiceDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "ServiceDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "ServiceDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "ServiceDasan4": [
+                "V8300"
+            ]
+        },
+        "mirror": {
+            "MirrorDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "MirrorDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "MirrorDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "redundancy": {
+            "RedundancyDasan1": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "ip": {
+        "self": {
+            "IpArista1": [
+                "eos"
+            ],
+            "IpDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "IpCisco1": [
+                "ios"
+            ],
+            "IpDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "IpDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "route": {
+            "RouteArista1": [
+                "eos"
+            ],
+            "RouteDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "RouteCisco1": [
+                "ios"
+            ],
+            "RouteDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "RouteDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "arp": {
+            "ArpDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "ArpDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "ArpDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "ArpDasan4": [
+                "V8300"
+            ]
+        },
+        "icmp": {
+            "IcmpDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "IcmpDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "IcmpDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "multicast": {
+            "MulticastDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "MulticastDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "ospf": {
+        "self": {
+            "OspfArista1": [
+                "eos"
+            ],
+            "OspfCisco1": [
+                "ios"
+            ],
+            "OspfDasan1": [
+                "M2400"
+            ],
+            "OspfDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "interface": {
+            "InterfaceArista1": [
+                "eos"
+            ],
+            "InterfaceCisco1": [
+                "ios"
+            ],
+            "InterfaceDasan1": [
+                "M2400"
+            ],
+            "InterfaceDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "bgp": {
+        "self": {
+            "BgpArista1": [
+                "eos"
+            ],
+            "BgpCisco1": [
+                "ios"
+            ],
+            "BgpDasan1": [
+                "M2400"
+            ],
+            "BgpDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "BgpDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "port_extender": {
+        "self": {
+            "PortExtenderDasan1": [
+                "FL108"
+            ]
+        }
+    },
+    "interface": {
+        "self": {
+            "InterfaceDasan1": [
+                "FL108",
+                "M1200",
+                "M2400",
+                "V108"
+            ],
+            "InterfaceDasan2": [
+                "H660G",
+                "H665",
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "InterfaceDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ],
+            "InterfaceZhone1": [
+                "ZNID_2804D"
+            ]
+        },
+        "port": {
+            "PortDasan1": [
+                "FL108",
+                "M1200",
+                "M2400",
+                "V108"
+            ],
+            "PortDasan2": [
+                "H660G",
+                "H665",
+                "V2708GB",
+                "V2724GB",
+                "V5816"
+            ],
+            "PortDasan6": [
+                "V2224GA",
+                "V2708M"
+            ],
+            "PortDasan7": [
+                "V2724",
+                "V2808K"
+            ],
+            "PortDasan5": [
+                "V5524XG"
+            ],
+            "PortDasan8": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "PortDasan4": [
+                "V5724G-10G",
+                "V5724G"
+            ],
+            "PortDasan3": [
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "PortDasan9": [
+                "V8300"
+            ],
+            "PortZhone1": [
+                "ZNID_2804D"
+            ]
+        },
+        "mgmt": {
+            "MgmtDasan1": [
+                "FL108",
+                "H660G",
+                "H665",
+                "M1200",
+                "M2400",
+                "V108",
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "MgmtDasan2": [
+                "V8300"
+            ],
+            "MgmtZhone1": [
+                "ZNID_2804D"
+            ]
+        },
+        "vlan": {
+            "VlanDasan1": [
+                "FL108",
+                "M1200",
+                "M2400",
+                "V5700"
+            ],
+            "VlanDasan2": [
+                "H660G",
+                "H665",
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "VlanDasan3": [
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "VlanDasan4": [
+                "V8300"
+            ],
+            "VlanZhone1": [
+                "ZNID_2804D"
+            ]
+        },
+        "gpon": {
+            "GponDasan1": [
+                "FL108",
+                "M1200",
+                "M2400",
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ],
+            "GponDasan2": [
+                "H660G",
+                "H665",
+                "V2224GA",
+                "V2708GB",
+                "V2724GB",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ]
+        },
+        "pe": {
+            "PeDasan1": [
+                "FL108"
+            ]
+        },
+        "port_security": {
+            "PortSecurityDasan1": [
+                "V5816"
+            ]
+        }
+    },
+    "igmp": {
+        "self": {
+            "IgmpDasan3": [
+                "FL108"
+            ],
+            "IgmpDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "IgmpDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "snooping": {
+            "SnoopingDasan3": [
+                "FL108"
+            ],
+            "SnoopingDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "SnoopingDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "SnoopingDasan4": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "fast_leave": {
+            "FastLeaveDasan3": [
+                "FL108"
+            ],
+            "FastLeaveDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "FastLeaveDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "FastLeaveDasan4": [
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "FastLeaveDasan5": [
+                "V8300"
+            ]
+        },
+        "security": {
+            "SecurityDasan3": [
+                "FL108"
+            ],
+            "SecurityDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "SecurityDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "group": {
+            "GroupDasan4": [
+                "FL108"
+            ],
+            "GroupDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "GroupDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "GroupDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "interface": {
+            "InterfaceDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "InterfaceDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "InterfaceDasan3": [
+                "V8300"
+            ]
+        }
+    },
+    "security": {
+        "self": {
+            "SecurityDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "SecurityDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "SecurityDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "ddos": {
+            "DdosDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "DdosDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "DdosDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "discard": {
+            "DiscardDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "DiscardDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "DiscardDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "access_mgmt": {
+            "AccessMgmtDasan1": [
+                "FL108",
+                "M1200",
+                "M2400"
+            ],
+            "AccessMgmtDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "AccessMgmtDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "guard": {
+            "GuardDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "GuardDasan2": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "dhcp_snooping": {
+            "DhcpSnoopingDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "DhcpSnoopingDasan2": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "qos": {
+        "self": {
+            "QosDasan2": [
+                "FL108",
+                "M1200"
+            ],
+            "QosDasan1": [
+                "M2400"
+            ],
+            "QosDasan3": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "QosDasan4": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "class_map": {
+            "ClassMapDasan3": [
+                "FL108"
+            ],
+            "ClassMapDasan2": [
+                "M1200"
+            ],
+            "ClassMapDasan1": [
+                "M2400"
+            ]
+        },
+        "interface": {
+            "InterfaceDasan5": [
+                "FL108"
+            ],
+            "InterfaceDasan2": [
+                "M1200"
+            ],
+            "InterfaceDasan1": [
+                "M2400"
+            ],
+            "InterfaceDasan3": [
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "InterfaceDasan4": [
+                "V8300"
+            ]
+        },
+        "policy_map": {
+            "PolicyMapDasan3": [
+                "FL108"
+            ],
+            "PolicyMapDasan2": [
+                "M1200"
+            ],
+            "PolicyMapDasan1": [
+                "M2400"
+            ]
+        },
+        "flows": {
+            "FlowsDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "FlowsDasan2": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "policy": {
+            "PolicyDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "PolicyDasan2": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "aaa": {
+        "self": {
+            "AaaDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "AaaDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "AaaDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "bootloader": {
+        "self": {
+            "BootLoaderDasan1": [
+                "M1200",
+                "M2400",
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "bridge": {
+        "self": {
+            "BridgeDasan1": [
+                "M1200",
+                "M2400"
+            ]
+        }
+    },
+    "vlan": {
+        "self": {
+            "VlanDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "VlanDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "VlanDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "port": {
+            "PortDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "PortDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "PortDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "fdb": {
+            "FdbDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "FdbDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "FdbDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "FdbDasan4": [
+                "V8300"
+            ]
+        }
+    },
+    "slot": {
+        "self": {
+            "SlotDasan3": [
+                "M1200",
+                "M2400"
+            ],
+            "SlotDasan2": [
+                "V5700",
+                "V8500"
+            ],
+            "SlotDasan4": [
+                "V5724G-10G",
+                "V5724G"
+            ],
+            "SlotDasan1": [
+                "V8102A",
+                "V8106",
+                "V8300"
+            ]
+        }
+    },
+    "fdb": {
+        "self": {
+            "FdbDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "FdbDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "FdbDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "loop_detect": {
+        "self": {
+            "LoopDetectDasan1": [
+                "M1200"
+            ],
+            "LoopDetectDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "LoopDetectDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "max_host": {
+        "self": {
+            "MaxHostDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "MaxHostDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "MaxHostDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "MaxHostDasan4": [
+                "V8300"
+            ]
+        }
+    },
+    "filter": {
+        "self": {
+            "FilterDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "FilterDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "FilterDasan3": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "prefix_list": {
+            "PrefixListDasan1": [
+                "M1200",
+                "M2400",
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "access_list": {
+            "AccessListDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "AccessListDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "AccessListDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "ip_access_list": {
+            "IpAccessListDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "IpAccessListDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "IpAccessListDasan3": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "flow_admin": {
+            "FlowAdminDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "FlowAdminDasan2": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "flow": {
+            "FlowDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "FlowDasan2": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "igmp_profile": {
+            "IgmpProfileDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "IgmpProfileDasan2": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "route_map": {
+        "self": {
+            "RouteMapDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "RouteMapDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "RouteMapDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "match": {
+            "MatchDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "MatchDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "MatchDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "set": {
+            "SetDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "SetDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "SetDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "tacacs": {
+        "self": {
+            "TacacsDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "TacacsDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "TacacsDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "radius": {
+        "self": {
+            "RadiusDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "RadiusDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "RadiusDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "link_aggregation": {
+        "self": {
+            "LinkAggregationDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "LinkAggregationDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "LinkAggregationDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "port": {
+            "PortDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "PortDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "PortDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8500"
+            ],
+            "PortDasan4": [
+                "V8300"
+            ]
+        }
+    },
+    "pim": {
+        "self": {
+            "PimDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "PimDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "PimDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "interface": {
+            "InterfaceDasan1": [
+                "M1200",
+                "M2400"
+            ],
+            "InterfaceDasan2": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "InterfaceDasan3": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "rpc": {
+        "self": {
+            "RPCDasan1": [
+                "V108"
+            ]
+        }
+    },
+    "dhcp": {
+        "self": {
+            "DhcpDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "DhcpDasan2": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "relay": {
+            "RelayDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5700",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "RelayDasan2": [
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "option82": {
+            "Option82Dasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "Option82Dasan2": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        },
+        "option_format": {
+            "OptionFormatDasan1": [
+                "V2224GA",
+                "V2708GB",
+                "V2708M",
+                "V2724",
+                "V2724GB",
+                "V2808K",
+                "V5524XG",
+                "V5724G-10G",
+                "V5724G",
+                "V5816",
+                "V6744XG",
+                "V6824XG",
+                "V6848XG"
+            ],
+            "OptionFormatDasan2": [
+                "V5700",
+                "V8102A",
+                "V8106",
+                "V8300",
+                "V8500"
+            ]
+        }
+    },
+    "gpon": {
+        "self": {
+            "GponDasan1": [
+                "V5816"
+            ],
+            "GponDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "olt": {
+            "OltDasan1": [
+                "V5816"
+            ],
+            "OltDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        }
+    },
+    "dba_profile": {
+        "self": {
+            "DbaProfileDasan1": [
+                "V5816"
+            ],
+            "DbaProfileDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        }
+    },
+    "traffic_profile": {
+        "self": {
+            "TrafficProfileDasan1": [
+                "V5816"
+            ],
+            "TrafficProfileDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "tcont": {
+            "TcontDasan1": [
+                "V5816"
+            ],
+            "TcontDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "mapper": {
+            "MapperDasan1": [
+                "V5816"
+            ],
+            "MapperDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "bridge_ani": {
+            "BridgeAniDasan1": [
+                "V5816"
+            ],
+            "BridgeAniDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "bridge_uni": {
+            "BridgeUniDasan1": [
+                "V5816"
+            ],
+            "BridgeUniDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        }
+    },
+    "onu_profile": {
+        "self": {
+            "OnuProfileDasan1": [
+                "V5816"
+            ],
+            "OnuProfileDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        }
+    },
+    "pm_profile": {
+        "self": {
+            "PmProfileDasan1": [
+                "V5816"
+            ],
+            "PmProfileDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        }
+    },
+    "mcast_profile": {
+        "self": {
+            "MulticastProfileDasan1": [
+                "V5816"
+            ],
+            "MulticastProfileDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "igmp": {
+            "IgmpDasan1": [
+                "V5816"
+            ],
+            "IgmpDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "igmp_acl": {
+            "IgmpAclDasan1": [
+                "V5816"
+            ],
+            "IgmpAclDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "igmp_tag_ctrl": {
+            "IgmpTagCtrlDasan1": [
+                "V5816"
+            ],
+            "IgmpTagCtrlDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "igmp_querier": {
+            "IgmpQuerierDasan1": [
+                "V5816"
+            ],
+            "IgmpQuerierDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        }
+    },
+    "ext_vlan_profile": {
+        "self": {
+            "ExtendedVlanProfileDasan1": [
+                "V5816"
+            ],
+            "ExtendedVlanProfileDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "untag": {
+            "UnTagDasan1": [
+                "V5816"
+            ],
+            "UnTagDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "single_tag": {
+            "SingleTagDasan1": [
+                "V5816"
+            ],
+            "SingleTagDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        },
+        "double_tag": {
+            "DoubleTagDasan1": [
+                "V5816"
+            ],
+            "DoubleTagDasan2": [
+                "V8102A",
+                "V8106"
+            ]
+        }
+    }
+}

@@ -1,0 +1,107 @@
+name: M2400
+
+init_interface_info:
+  - type: ethernet
+    slot_id: 0
+    ports: 4
+    name: tengigabitethernet
+    alias: xe
+    start: 1
+
+local_interface_info:
+  - type: management
+    name: mgmt
+    alias: mgmt
+
+card_info:
+  iu-10ge2:
+    type: ethernet
+    ports: 2
+    name: tengigabitethernet
+    alias: xe
+  iu-ge8:
+    type: ethernet
+    ports: 8
+    name: gigabitethernet
+    alias: ge
+
+feature:
+  aaa:
+    type: AaaDasan1
+  bootloader:
+    type: BootLoaderDasan1
+  system:
+    type: SystemDasan1
+    os: OsDasan1
+    user: UserDasan1
+    time: TimeDasan1
+    coredump: CoreDumpDasan1
+    config: ConfigDasan1
+    log: LogDasan1
+    service: ServiceDasan1
+    mirror: MirrorDasan1
+  interface:
+    type: InterfaceDasan1
+    port: PortDasan1
+    mgmt: MgmtDasan1
+    vlan: VlanDasan1
+    gpon: GponDasan1
+  bridge:
+    type: BridgeDasan1
+  vlan:
+    type: VlanDasan1
+    port: PortDasan1
+    fdb: FdbDasan1
+  slot:
+    type: SlotDasan3
+  fdb:
+    type: FdbDasan1
+  max_host:
+    type: MaxHostDasan1
+  ip:
+    type: IpDasan1
+    arp: ArpDasan1
+    route: RouteDasan1
+    icmp: IcmpDasan1
+    multicast: MulticastDasan1
+  filter:
+    type: FilterDasan1
+    prefix_list: PrefixListDasan1
+    access_list: AccessListDasan1
+    ip_access_list: IpAccessListDasan1
+  route_map:
+    type: RouteMapDasan1
+    match: MatchDasan1
+    set: SetDasan1
+  tacacs:
+    type: TacacsDasan1
+  radius:
+    type: RadiusDasan1
+  ospf:
+    type: OspfDasan1
+    interface: InterfaceDasan1
+  security:
+    type: SecurityDasan1
+    ddos: DdosDasan1
+    discard: DiscardDasan1
+    access_mgmt: AccessMgmtDasan1
+  bgp:
+    type: BgpDasan1
+  link_aggregation:
+    type: LinkAggregationDasan1
+    port: PortDasan1
+  igmp:
+    type: IgmpDasan1
+    snooping: SnoopingDasan1
+    fast_leave: FastLeaveDasan1
+    security: SecurityDasan1
+    group: GroupDasan1
+    interface: InterfaceDasan1
+  pim:
+    type: PimDasan1
+    interface: InterfaceDasan1
+  qos:
+    type: QosDasan1
+    class_map: ClassMapDasan1
+    interface: InterfaceDasan1
+    policy_map: PolicyMapDasan1

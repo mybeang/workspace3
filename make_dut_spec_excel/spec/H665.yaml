@@ -1,0 +1,24 @@
+name: H665
+
+init_interface_info:
+  - type: ethernet
+    slot_id:
+    ports: 1
+    name:
+    alias:
+    start: 1
+
+local_interface_info:
+  - type: management
+    name: mgmt
+    alias: mgmt
+
+card_info:
+
+feature:
+  interface:
+    type: InterfaceDasan2 # todo. InterfaceDasanONT{X} ? , InterfaceDasan{X} ?. 임시로 V5816 Feature로 만듬.
+    port: PortDasan2 # todo. 임시로 V5816 Feature 로 만듬.
+    mgmt: MgmtDasan1 # todo. 임시로 V5816 Feature 로 만듬.
+    vlan: VlanDasan2 # todo. 임시로 V5816 Feature 로 만듬.
+    gpon: GponDasan2 # todo. 임시로 V5816 Feature 로 만듬.

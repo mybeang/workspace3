@@ -1,0 +1,21 @@
+name: V108
+
+init_interface_info:
+
+local_interface_info:
+  - type: management
+    name: mgmt
+    alias: mgmt
+  - type: loopback
+    name: lo
+    alias: lo
+
+card_info:
+
+feature:
+  interface:
+    type: InterfaceDasan1
+    port: PortDasan1
+    mgmt: MgmtDasan1
+  rpc:
+    type: RPCDasan1

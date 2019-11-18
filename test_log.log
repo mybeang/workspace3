@@ -1,0 +1,5 @@
+2019-05-20 08:08:16,944 CRITICAL {example009:19} Hello this is critical log
+2019-05-20 08:08:16,944 ERROR   {example009:20} Hello this is error log
+2019-05-20 08:08:16,944 WARNING {example009:21} Hello this is warning log
+2019-05-20 08:08:16,944 INFO    {example009:22} Hello this is info log
+2019-05-20 08:08:16,945 DEBUG   {example009:23} Hello this is debug log

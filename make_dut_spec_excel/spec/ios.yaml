@@ -1,0 +1,15 @@
+name: ios
+
+feature:
+  system:
+    type: SystemCisco1
+    os: OsCisco1
+    time: TimeCisco1
+  ip:
+    type: IpCisco1
+    route: RouteCisco1
+  ospf:
+    type: OspfCisco1
+    interface: InterfaceCisco1
+  bgp:
+    type: BgpCisco1

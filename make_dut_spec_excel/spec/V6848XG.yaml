@@ -1,0 +1,104 @@
+name: V6848XG
+
+init_interface_info:
+  - type: ethernet
+    slot_id:
+    ports: 48
+    name:
+    alias:
+    start: 1
+
+local_interface_info:
+  - type: management
+    name: mgmt
+    alias: mgmt
+
+card_info:
+
+feature:
+  aaa:
+    type: AaaDasan2
+  bootloader:
+    type: BootLoaderDasan1
+  dhcp:
+    type: DhcpDasan1
+    relay: RelayDasan1
+    option82: Option82Dasan1
+    option_format: OptionFormatDasan1
+  system:
+    type: SystemDasan2
+    os: OsDasan2
+    user: UserDasan2
+    time: TimeDasan2
+    coredump: CoreDumpDasan2
+    config: ConfigDasan1
+    log: LogDasan2
+    service: ServiceDasan2
+    mirror: MirrorDasan2
+  interface:
+    type: InterfaceDasan2
+    port: PortDasan3
+    mgmt: MgmtDasan1
+    vlan: VlanDasan2
+    gpon: GponDasan2
+  vlan:
+    type: VlanDasan2
+    port: PortDasan2
+    fdb: FdbDasan2
+  fdb:
+    type: FdbDasan2
+  loop_detect:
+    type: LoopDetectDasan2
+  max_host:
+    type: MaxHostDasan2
+  ip:
+    type: IpDasan2
+    arp: ArpDasan2
+    route: RouteDasan2
+    icmp: IcmpDasan2
+    multicast: MulticastDasan2
+  filter:
+    type: FilterDasan2
+    prefix_list: PrefixListDasan1
+    access_list: AccessListDasan2
+    ip_access_list: IpAccessListDasan2
+    flow_admin: FlowAdminDasan1
+    flow: FlowDasan1
+    igmp_profile: IgmpProfileDasan1
+  route_map:
+    type: RouteMapDasan2
+    match: MatchDasan2
+    set: SetDasan2
+  tacacs:
+    type: TacacsDasan2
+  radius:
+    type: RadiusDasan2
+  ospf:
+    type: OspfDasan2
+    interface: InterfaceDasan2
+  security:
+    type: SecurityDasan2
+    ddos: DdosDasan2
+    guard: GuardDasan1
+    dhcp_snooping: DhcpSnoopingDasan1
+    discard: DiscardDasan2
+    access_mgmt: AccessMgmtDasan2
+  bgp:
+    type: BgpDasan2
+  link_aggregation:
+    type: LinkAggregationDasan2
+    port: PortDasan2
+  igmp:
+    type: IgmpDasan2
+    snooping: SnoopingDasan2
+    fast_leave: FastLeaveDasan2
+    security: SecurityDasan2
+    group: GroupDasan2
+    interface: InterfaceDasan2
+  pim:
+    type: PimDasan2
+    interface: InterfaceDasan2
+  qos:
+    type: QosDasan3
+    flows: FlowsDasan1
+    policy: PolicyDasan1

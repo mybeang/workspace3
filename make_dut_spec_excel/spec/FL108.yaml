@@ -1,0 +1,63 @@
+name: FL108
+
+init_interface_info:
+  - type: gpon
+    slot_id: 0
+    ports: 8
+    name: optical
+    alias: optical
+    start: 1
+  - type: ethernet
+    slot_id: 0
+    ports: 4
+    name: tengigabitethernet
+    alias: xe
+    start: 9
+
+local_interface_info:
+  - type: management
+    name: mgmt
+    alias: mgmt
+
+feature:
+  system:
+    type: SystemDasan1
+    os: OsDasan1
+    user: UserDasan1
+    time: TimeDasan1
+    coredump: CoreDumpDasan1
+    config: ConfigDasan3
+    log: LogDasan1
+    service: ServiceDasan1
+    mirror: MirrorDasan1
+  port_extender:
+    type: PortExtenderDasan1
+  interface:
+    type: InterfaceDasan1
+    port: PortDasan1
+    mgmt: MgmtDasan1
+    vlan: VlanDasan1
+    gpon: GponDasan1
+    pe: PeDasan1
+  igmp:
+    type: IgmpDasan3
+    snooping: SnoopingDasan3
+    fast_leave: FastLeaveDasan3
+    security: SecurityDasan3
+    group: GroupDasan4
+  ip:
+    type: IpDasan1
+    arp: ArpDasan1
+    route: RouteDasan1
+    icmp: IcmpDasan1
+    multicast: MulticastDasan1
+  security:
+    type: SecurityDasan1
+    ddos: DdosDasan1
+    discard: DiscardDasan1
+    access_mgmt: AccessMgmtDasan1
+  qos:
+    type: QosDasan2
+    class_map: ClassMapDasan3
+    interface: InterfaceDasan5
+    policy_map: PolicyMapDasan3

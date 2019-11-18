@@ -1,0 +1,157 @@
+name: V8102A
+
+init_interface_info:
+
+local_interface_info:
+  - type: management
+    name: management
+    alias: mgmt
+
+card_info:
+  sfu-10ge2-ge2:
+    - type: ethernet
+      ports: 2
+      name: gigabitethernet
+      alias: ge
+    - type: ethernet
+      ports: 2
+      name: tengigabitethernet
+      alias: xe
+  siu-gpon16:
+    type: gpon
+    ports: 16
+    name: gpon
+    alias: gpon
+  siu-gpon16a:
+    type: gpon
+    ports: 16
+    name: gpon
+    alias: gpon
+  siu-gpon16t:
+    type: gpon
+    ports: 16
+    name: gpon
+    alias: gpon
+  siu-gpon8a:
+    type: gpon
+    ports: 8
+    name: gpon
+    alias: gpon
+
+feature:
+  aaa:
+    type: AaaDasan3
+  bootloader:
+    type: BootLoaderDasan1
+  dhcp:
+    type: DhcpDasan2
+    relay: RelayDasan2
+    option82: Option82Dasan2
+    option_format: OptionFormatDasan2
+  system:
+    type: SystemDasan3
+    os: OsDasan3
+    user: UserDasan3
+    time: TimeDasan3
+    coredump: CoreDumpDasan3
+    config: ConfigDasan2
+    log: LogDasan2
+    service: ServiceDasan3
+    mirror: MirrorDasan3
+    redundancy: RedundancyDasan1
+  interface:
+    type: InterfaceDasan3
+    port: PortDasan8
+    mgmt: MgmtDasan1
+    vlan: VlanDasan3
+    gpon: GponDasan1
+  vlan:
+    type: VlanDasan3
+    port: PortDasan3
+    fdb: FdbDasan3
+  slot:
+    type: SlotDasan1
+  fdb:
+    type: FdbDasan3
+  loop_detect:
+    type: LoopDetectDasan3
+  max_host:
+    type: MaxHostDasan3
+  ip:
+    type: IpDasan3
+    arp: ArpDasan3
+    route: RouteDasan3
+    icmp: IcmpDasan3
+    multicast: MulticastDasan2
+  filter:
+    type: FilterDasan3
+    prefix_list: PrefixListDasan1
+    access_list: AccessListDasan3
+    ip_access_list: IpAccessListDasan3
+    flow_admin: FlowAdminDasan2
+    flow: FlowDasan2
+    igmp_profile: IgmpProfileDasan2
+  route_map:
+    type: RouteMapDasan3
+    match: MatchDasan3
+    set: SetDasan3
+  tacacs:
+    type: TacacsDasan3
+  radius:
+    type: RadiusDasan3
+  ospf:
+    type: OspfDasan2
+    interface: InterfaceDasan2
+  security:
+    type: SecurityDasan3
+    ddos: DdosDasan3
+    guard: GuardDasan2
+    dhcp_snooping: DhcpSnoopingDasan2
+    discard: DiscardDasan3
+    access_mgmt: AccessMgmtDasan3
+  bgp:
+    type: BgpDasan3
+  link_aggregation:
+    type: LinkAggregationDasan3
+    port: PortDasan3
+  igmp:
+    type: IgmpDasan2
+    snooping: SnoopingDasan4
+    fast_leave: FastLeaveDasan4
+    security: SecurityDasan2
+    group: GroupDasan3
+    interface: InterfaceDasan2
+  pim:
+    type: PimDasan3
+    interface: InterfaceDasan3
+  qos:
+    type: QosDasan4
+    flows: FlowsDasan2
+    interface: InterfaceDasan3
+    policy: PolicyDasan2
+  gpon:
+    type: GponDasan2
+    olt: OltDasan2
+  dba_profile:
+    type: DbaProfileDasan2
+  traffic_profile:
+    type: TrafficProfileDasan2
+    tcont: TcontDasan2
+    mapper: MapperDasan2
+    bridge_ani: BridgeAniDasan2
+    bridge_uni: BridgeUniDasan2
+  onu_profile:
+    type: OnuProfileDasan2
+  pm_profile:
+    type: PmProfileDasan2
+  mcast_profile:
+    type: MulticastProfileDasan2
+    igmp: IgmpDasan2
+    igmp_acl: IgmpAclDasan2
+    igmp_tag_ctrl: IgmpTagCtrlDasan2
+    igmp_querier: IgmpQuerierDasan2
+  ext_vlan_profile:
+    type: ExtendedVlanProfileDasan2
+    untag: UnTagDasan2
+    single_tag: SingleTagDasan2
+    double_tag: DoubleTagDasan2
